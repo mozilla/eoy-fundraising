@@ -97,3 +97,10 @@
   bottom: 0;
   right: 0;
 }
+
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  #period-graph-container .column .bar .below-title{
+    font-size: 10px;
+  }
+}

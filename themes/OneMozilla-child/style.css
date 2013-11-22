@@ -187,15 +187,28 @@ a:active {
 section h3{
     /*color: rgb(0,150,221);*/
     color: rgb(230,96,0);
-    font-size: 32px;
+    font-size: 27px;
     margin-bottom: 20px;
 }
 
-.row{
+.row,
+.sub-row{
     display: block;
-    padding: 0 10px;
     overflow: hidden;
     height: 100%;
+}
+
+.row{
+    padding: 0 10px;
+}
+
+.sub-row{
+    width: 100%;
+}
+
+#second-row{
+    width: 617px;
+    width: calc( 66.66666% - 50px );
 }
 
 .white-bg{
@@ -203,23 +216,39 @@ section h3{
     padding: 25px 15px;
 }
 
-.two-columns{
-    width: calc( 50% - 50px );
-    width: 440px;   /* (1000px-20px)/2-(padding:15px*2+margin:10px*2)=490px-50px */ 
-    min-height: 300px;
+#view-blog-section,
+#older-blog-post-section {
+    width: 567px;
+    width: calc( 100% - 50px );
     float: left;
+    margin: 10px;
+}
+
+#poll-section{
+    width: 312px;
+    position: absolute;
+    right: 10px;
+    margin: 10px;
+}
+
+
+.two-columns{
     display: inline-block;
     margin: 10px;
     position: relative;
+    float: left;
 }
 
-.three-columns{
-    width: calc( 33.33% - 50px );
-    width: 276.666px;  /* (1000px-20px)/3-(padding:15px*2+margin:10px*2)=490px-50px */
-    height: 200px;
-    float: left;
-    display: inline-block;
-    margin: 10px;
+#first-row .two-columns{
+    width: 440px;   /* (1000px-20px)/2-(padding:15px*2+margin:10px*2)=490px-50px */
+    width: calc( 50% - 50px );
+    min-height: 300px;
+}
+
+#second-row .two-columns{
+    width: 258px;
+    width: calc( 50% - 50px );
+    height: 230px;
 }
 
 .graph-box-container{
@@ -227,7 +256,7 @@ section h3{
     min-height: 250px;
 }
 
-#older-blog-post a,
+#older-blog-post-section a,
 #links a{
   font-size: 15px;
   color: #777;
@@ -314,7 +343,7 @@ section h3{
 /* Polls widget =========== */
 
 .poll-question{
-    font-size: 28px;
+    font-size: 24px;
     line-height: 30px;
     font-family: "Open Sans Light";
     margin-bottom: 10px;
@@ -327,7 +356,6 @@ section h3{
 }
 
 .vote-today{
-    float: left;
     text-align: center;
     line-height: 100px;
 }
@@ -519,22 +547,27 @@ section h3{
 /*  @Tablet @Layout: 768px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 
-  .row{
+  .row,
+  .sub-row{
       padding: 0;
   }
 
-  .two-columns{
-      width: calc( 50% - 50px );  /* (margin:10px*2+padding:15px*2) */ 
-      width: 330px;
-      height: 350px;
-      margin: 10px;
+  #poll-section{
+    right: 0;
+    width: 253px;
+    width: calc( 33.3333% - 0px );
   }
 
-  .three-columns{
-      width: calc( 33.3333% - 50px );  /* (margin:10px*2+padding:15px*2) */ 
-      width: 203px;
-      height: 250px;
-      margin: 10px;
+  #first-row .two-columns{
+    width: 330px;
+    width: calc( 50% - 50px );  /* (margin:10px*2+padding:15px*2) */ 
+  }
+
+  #second-row .two-columns{
+    width: 390px;  
+    width: calc( 100% - 50px );  /* (padding:15px*2) */ 
+    height: 100%;
+    margin: 10px;
   }
 
 }
@@ -542,18 +575,25 @@ section h3{
 /*  @Mobile @Layout: 320px */
 @media only screen and (max-width: 767px) {
 
-  .two-columns{
-    width: calc( 100% - 30px );  /* (padding:15px*2) */ 
+  #poll-section{
     width: 390px;  
-    height: 100%;
-    margin: 10px 0;
+    width: calc( 100% - 30px );  /* (padding:15px*2) */ 
+    position: relative;
+    right: 0;
+    float: left;
+    margin: 10px;
   }
 
-  .three-columns{
-      width: calc( 100% - 30px );  /* (padding:15px*2) */ 
-      width: 390px;
-      height: 100%;
-      margin: 10px 0;
+  #second-row{
+    width: auto;
+  }
+
+  #first-row .two-columns,
+  #second-row section{
+    width: 390px;  
+    width: calc( 100% - 30px );  /* (padding:15px*2) */ 
+    height: 100%;
+    margin: 10px 0;
   }
 
 }
@@ -589,22 +629,29 @@ section h3{
     font-size: 1.4em;
   }
 
-  .two-columns{
-    width: calc( 100% - 30px );  /* (padding:15px*2) */ 
+
+  #poll-section{
     width: 390px;  
+    width: calc( 100% - 30px );  /* (padding:15px*2) */ 
+    position: relative;
+    right: 0;
+    float: left;
+    margin: 10px;
+  }
+
+  #second-row{
+    width: auto;
+  }
+
+  #first-row .two-columns,
+  #second-row .two-columns{
+    width: 390px;  
+    width: calc( 100% - 30px );  /* (padding:15px*2) */ 
     height: 100%;
     margin: 10px 0;
   }
 
-  .three-columns{
-      width: calc( 100% - 30px );  /* (padding:15px*2) */ 
-      width: 390px;
-      height: 100%;
-      margin: 10px 0;
-  }
-
 }
-
 
 
 /*  @Narrow @Mobile @Layout: 480px */
@@ -641,18 +688,17 @@ section h3{
     font-size: 1.4em;
   }
 
-  .row{
+  .row,
+  .sub-row{
       padding: 0;
   }
 
-  .two-columns,
-  .three-columns{
+  #first-row .two-columns,
+  #second-row .two-columns{
     width: 250px;  
+    width: calc( 100% - 30px );  /* (padding:15px*2) */ 
+    height: 100%;
     margin: 10px 0;
-  }
-
-  #twitter-feed-widget{
-    width: 250px;
   }
 
 }
