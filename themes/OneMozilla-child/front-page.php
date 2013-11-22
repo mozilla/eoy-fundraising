@@ -18,7 +18,7 @@
       </section>
 
       <section class="white-bg two-columns">
-        <h3>Income by Source</h3>
+        <h3>Donations by Source</h3>
         <div class="graph-box-container">
           <div id="source-graph-container" data-source-bar-container>
             <div class="column">
