@@ -1,0 +1,99 @@
+#period-graph-container,
+#source-graph-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+}
+
+#period-graph-container {
+  background-color: #fff;
+  /* edited from http://lea.verou.me/css3patterns/#lined-paper */
+  background-image: -webkit-linear-gradient(90deg, transparent 81px, #abced4 81px, #abced4 81px, transparent 81px),
+                    -webkit-linear-gradient(transparent 19px, #eee 1px);
+  background-image:    -moz-linear-gradient(90deg, transparent 81px, #abced4 81px, #abced4 81px, transparent 81px),
+                       -moz-linear-gradient(transparent 19px, #eee 1px);
+  background-image:     -ms-linear-gradient(90deg, transparent 81px, #abced4 81px, #abced4 81px, transparent 81px),
+                        -ms-linear-gradient(transparent 19px, #eee 1px);
+  background-image:      -o-linear-gradient(90deg, transparent 81px, #abced4 81px, #abced4 81px, transparent 81px),
+                         -o-linear-gradient(transparent 19px, #eee 1px);
+  background-image:         linear-gradient(90deg, transparent 81px, #abced4 81px, #abced4 81px, transparent 81px),
+                            linear-gradient(transparent 19px, #eee 1px);
+  background-size: 100% 20px;
+  background-position: 0 100%;
+  margin-bottom: 4em;
+}
+
+#source-graph-container {
+  position: absolute;
+  right: 10px;
+  bottom: 5em;
+}
+
+.column {
+  height: 100%;
+  display: inline-block;
+  position: relative;
+}
+
+#period-graph-container .column .bar {
+  left: 0;
+  right: 0;
+}
+
+#source-graph-container .column .bar {
+  background: #edc45d;
+  background: -moz-linear-gradient(top,  #edc45d 0%, #febd18 1%, #febd18 43%, #ff9900 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#edc45d), color-stop(1%,#febd18), color-stop(43%,#febd18), color-stop(100%,#ff9900));
+  background: -webkit-linear-gradient(top,  #edc45d 0%,#febd18 1%,#febd18 43%,#ff9900 100%);
+  background: -o-linear-gradient(top,  #edc45d 0%,#febd18 1%,#febd18 43%,#ff9900 100%);
+  background: -ms-linear-gradient(top,  #edc45d 0%,#febd18 1%,#febd18 43%,#ff9900 100%);
+  background: linear-gradient(to bottom,  #edc45d 0%,#febd18 1%,#febd18 43%,#ff9900 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edc45d', endColorstr='#ff9900',GradientType=0 );
+}
+
+.column .bar {
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  left: 2%;
+  right: 2%;
+}
+
+.column .bar .above-title {
+  position: absolute;
+  top: -3em;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+.column .bar .below-title {
+  position: absolute;
+  bottom: -3em;
+  width: 100%;
+  text-align: center;
+}
+
+.graph-amount-marker {
+  position: absolute;
+  z-index: 1;
+  height: .5em;
+}
+
+.graph-amount-marker.top {
+  bottom: 80%;
+}
+
+.graph-amount-marker.bottom {
+  bottom: 0em;
+}
+
+.spacing-container {
+  position: absolute;
+  top: 0;
+  left: 2em;
+  bottom: 0;
+  right: 0;
+}
