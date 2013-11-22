@@ -7,7 +7,7 @@
     <div class="wrap">
         Get Mozilla updates
         <div id="go-to-newsletter">
-          <a href="http://www.mozilla.org/en-US/newsletter/" target="_blank" class="button button-blue">Go to sign up page</a>
+          <a href="//sendto.mozilla.org/page/s/sign-up-for-mozilla/" target="_blank" class="button button-blue">Go to sign up page</a>
         </div>
     </div>
   </div>
