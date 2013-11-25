@@ -59,10 +59,10 @@
 
           <section id="links" class="white-bg two-columns">
             <h3>Links</h3>
-            <a href="https://sendto.mozilla.org/" target="_blank">Donate Today</a><br/>
+            <a href="//sendto.mozilla.org/page/contribute/EOYFR2013-newdefault?source=viewsource_bottom_link" target="_blank">Donate Today</a><br/>
             <!-- remember to pass the right page_id: (staging) 20; -->
             <a href=<?php echo get_page_uri('20') ?> target="_blank">Campaign Overview</a><br/>
-            <a href="http://www.mozilla.org/en-US/about/manifesto/" target="_blank">Mozilla Manifesto</a><br/>
+            <a href="//www.mozilla.org/en-US/about/manifesto/" target="_blank">Mozilla Manifesto</a><br/>
             <a href="" target="">What is View-source Fundraising</a>
           </section>
         </div>
