@@ -46,7 +46,7 @@
         <section id="older-blog-post-section" class="white-bg">
           <h3>Older Blog Posts</h3>
           <?php if ( dynamic_sidebar('older-blog-post-widget') ) : else : endif; ?>
-	  <div class="archive-link"><a href="/archive">See all posts</a></div>
+	  <div class="archive-link"><a href="/all-posts/">See all posts</a></div>
         </section>
 
         <div class="sub-row">

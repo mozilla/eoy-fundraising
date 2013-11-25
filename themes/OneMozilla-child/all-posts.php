@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Archive 
+Template Name: All Posts
 */
 // Count search results
 global $wp_query;
