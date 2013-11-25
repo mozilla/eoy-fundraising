@@ -6,6 +6,7 @@
   }
 
   var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+  var ignoreBeginningPeriods = 2;
 
   function formatDate (date) {
     return (date.getMonth() + 1) + '/' + date.getDate();
@@ -37,15 +38,16 @@
 
       var totalDollars = periodData.reduce(function(acc, period) { return acc + period.data.amount; }, 0);
 
-      document.querySelector('#period-graph-container .graph-amount-marker.top').innerHTML = '$' + formatCurrencyNumber(totalDollars, 2, '.', ',');
-      document.querySelector('#period-graph-title').innerHTML = '$' + formatCurrencyNumber(totalDollars, 2, '.', ',');
-
       var runningTotalDollars = 0;
       var runningTotalContributors = 0;
 
+      var numPeriods = periodData.length - ignoreBeginningPeriods;
+
       periodData.forEach(function (period, index) {
+        if (index < periodData.length - numPeriods) return;
+
         var column = columnTemplate.cloneNode(true);
-        var columnWidth = 100 / periodData.length;
+        var columnWidth = 100 / numPeriods;
         var bar = column.querySelector('.bar');
         var aboveTitle = column.querySelector('.above-title');
         var belowTitle = column.querySelector('.below-title');
@@ -58,7 +60,7 @@
         // bar.style.height = 80 * runningTotalDollars / totalDollars + '%';
 
         var startPercentage = -100 * index;
-        var endPercentage = 100 * (periodData.length - index);
+        var endPercentage = 100 * (numPeriods - (index - ignoreBeginningPeriods));
 
         startPercentage = startPercentage + '%';
         endPercentage = endPercentage + '%';
@@ -79,6 +81,9 @@
 
         graphContainer.appendChild(column);
       });
+
+      document.querySelector('#period-graph-container .graph-amount-marker.top').innerHTML = '$' + formatCurrencyNumber(runningTotalDollars, 2, '.', ',');
+      document.querySelector('#period-graph-title').innerHTML = '$' + formatCurrencyNumber(runningTotalDollars, 2, '.', ',');
     }
 
     function createSourceGraph () {
@@ -96,7 +101,7 @@
         column.style.width = 100 / sourceData.length + '%';
         column.querySelector('.bar').style.height = 80 * source.data.amount / totalContributions + '%';
         belowTitle.appendChild(document.createTextNode(source.name[0].toUpperCase() + source.name.substr(1)));
-        aboveTitle.appendChild(document.createTextNode('$' + source.data.amount + ' from ' + source.data.contributors + ' contributors'));
+        aboveTitle.innerHTML = '<div class="amount">$' + formatCurrencyNumber(source.data.amount, 2, '.', ',') + '</div><div class="contributors">' + source.data.contributors + ' contributors</div>';
         graphContainer.appendChild(column);
       });
     }

@@ -98,6 +98,9 @@
   right: 0;
 }
 
+#source-graph-container .contributors {
+  font-size: .6em;
+}
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
   #period-graph-container .column .bar .below-title{
