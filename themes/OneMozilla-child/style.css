@@ -224,6 +224,11 @@ section h3{
     margin: 10px;
 }
 
+#older-blog-post-section .archive-link {
+    width: 100%;
+    text-align: right;
+}
+
 #poll-section{
     width: 312px;
     position: absolute;

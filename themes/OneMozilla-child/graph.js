@@ -11,6 +11,10 @@
     return (date.getMonth() + 1) + '/' + date.getDate();
   }
 
+  var graphContainer = document.querySelector('*[data-period-bar-container]');
+
+  if (!graphContainer) return;
+
   var xhr = new XMLHttpRequest();
   xhr.open('GET', 'https://s3.amazonaws.com/mozilla-bsd-cache/eoy.json', true);
   xhr.onload = function () {
@@ -28,7 +32,6 @@
         }
       });
 
-      var graphContainer = document.querySelector('*[data-period-bar-container]');
       var columnTemplate = graphContainer.querySelector('.column');
       columnTemplate.parentNode.removeChild(columnTemplate);
 
