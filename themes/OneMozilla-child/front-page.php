@@ -53,17 +53,16 @@
           <section id="twitter-feeds" class="white-bg two-columns">
             <h3>Twitter Feeds</h3>
             <?php if ( dynamic_sidebar('twitter-feed-widget') ) : else : endif; ?>
-            <a class="twitter-timeline" href="https://twitter.com/search?q=%23lovetheweb+OR+%23protecttheweb" data-widget-id="401474842102202368" data-tweet-limit="1" data-chrome="noheader nofooter transparent noborders">Tweets about "#lovetheweb OR #protecttheweb"</a>
+            <a class="twitter-timeline" href="//twitter.com/search?q=%23lovetheweb+OR+%23protecttheweb" data-widget-id="401474842102202368" data-tweet-limit="1" data-chrome="noheader nofooter transparent noborders">Tweets about "#lovetheweb OR #protecttheweb"</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
           </section>
 
           <section id="links" class="white-bg two-columns">
             <h3>Links</h3>
-            <a href="//sendto.mozilla.org/page/contribute/EOYFR2013-newdefault?source=viewsource_bottom_link" target="_blank">Donate Today</a><br/>
-            <!-- remember to pass the right page_id: (staging) 20; -->
-            <a href=<?php echo get_page_uri('20') ?> target="_blank">Campaign Overview</a><br/>
+            <a href="//sendto.mozilla.org/" target="_blank">Donate Today</a><br/>
+            <a href="//fundraising.mozilla.org/campaign-overview/" target="_blank">Campaign Overview</a><br/>
             <a href="//www.mozilla.org/en-US/about/manifesto/" target="_blank">Mozilla Manifesto</a><br/>
-            <a href="" target="">What is View-source Fundraising</a>
+            <a href="//fundraising.mozilla.org/what-is-view-source-fundraising/" target="_blank">What is View-source Fundraising</a>
           </section>
         </div>
       </div>
