@@ -211,14 +211,12 @@ Template Name: Campaign Overview Page
 				</table>
 				<div class="clear"></div>
 				<p>
-					We're fortunate to have new leadership behind this year's efforts, including a senior executive joining us from Change.or.  We have also engaged M+R Strategic Services, who advise Wikimedia's fundraising.
+					We're fortunate to have new leadership behind this year's efforts, including a senior executive joining us from Change.org.  We have also engaged M+R Strategic Services, who advise Wikimedia's fundraising.
 				</p>
 				<p>
 					We're committed to making the 2013 campaign a success and hope that you'll join us in making it the biggest and best yet.
 				</p>
 				<div style="margin-top: 60px; font-size: 13px">
-					<span class="light-grey-text">For detailed information visit:</span> <a href="http://mzl.la/eoy2013" target="_blank">mzl.la/eoy2013</a><br/>
-					<span class="light-grey-text">To ask questions or get involved, e-mail</span> <a href="mailto:devteam@mozillafoundation.org?Subject=2013%20End%20of%20Year%20Fundraising%20Campaign" target="_top">devteam@mozillafoundation.org</a>
 				</div>
 			</div>
 		</section>
@@ -272,7 +270,7 @@ Template Name: Campaign Overview Page
 						We also need more people to contribute money. Donations increase our chance of success, fund programs that teach and advocate for the web, and show that we're different.  They show we're proudly non-profit.
 					</p>
 					<p>
-						A community of Mozillians is already working to make this year's end of year campaign the best yet. The inside of this brochure provides an overview of our plans.  We'll need your support to make it successful. Let's keep making the web open and awesome for everyone.
+						A community of Mozillians is already working to make this year's end of year campaign the best yet. We'll need your support to make it successful. Let's keep making the web open and awesome for everyone.
 					</p>
 					<p id="letter-author">
 						<b>Mark Surman</b><br/>
@@ -281,7 +279,6 @@ Template Name: Campaign Overview Page
 					</p>
 				</div>
 			</div>
-			<img src="/wp-content/uploads/2013/11/letter-chart.png" />
 		</section>
 	</div>
 </div>
