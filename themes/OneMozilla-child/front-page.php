@@ -6,8 +6,6 @@
         <h3>EOY Campaign Total: <span id="period-graph-title"></span></h3>
         <div class="graph-box-container">
           <div id="period-graph-container">
-            <div hidden class="top graph-amount-marker">$100</div>
-            <div hidden class="bottom graph-amount-marker">$0</div>
             <div class="spacing-container" data-period-bar-container>
               <div class="column">
                 <div class="bar"><div class="above-title"></div><div class="below-title"></div></div>
@@ -46,7 +44,7 @@
         <section id="older-blog-post-section" class="white-bg">
           <h3>Older Blog Posts</h3>
           <?php if ( dynamic_sidebar('older-blog-post-widget') ) : else : endif; ?>
-	  <div class="archive-link"><a href="/all-posts/">See all posts</a></div>
+          <div class="archive-link"><a href="/all-posts/">See all posts</a></div>
         </section>
 
         <div class="sub-row">

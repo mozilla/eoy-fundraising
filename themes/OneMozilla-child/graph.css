@@ -76,6 +76,11 @@
   text-align: center;
 }
 
+#period-graph-container .below-title {
+  font-size: .7em;
+  bottom: -4em;
+}
+
 .graph-amount-marker {
   position: absolute;
   z-index: 1;
@@ -93,7 +98,7 @@
 .spacing-container {
   position: absolute;
   top: 0;
-  left: 2em;
+  left: 0;
   bottom: 0;
   right: 0;
 }

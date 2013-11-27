@@ -5,8 +5,7 @@
     return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
   }
 
-  var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
-  var ignoreBeginningPeriods = 3;
+  var ignoreBeginningPeriods = 0;
 
   function formatDate (date) {
     return (date.getMonth() + 1) + '/' + date.getDate();
@@ -25,11 +24,18 @@
 
     function createPeriodGraph () {
       periodData = periodData.sort(function (a, b) {
-        if (a.month === b.month) {
-          return a.startDate > b.startDate ? 1 : (a.startDate < b.startDate ? -1 : 0)
+        var aMonth = Number(a.month);
+        var bMonth = Number(b.month);
+        var aStart = Number(a.startDate);
+        var bStart = Number(b.startDate);
+        var aEnd = Number(a.endDate);
+        var bend = Number(b.endDate);
+
+        if (aMonth === bMonth) {
+          return aStart > bStart ? 1 : (aStart < bStart ? -1 : 0);
         }
         else {
-          return a.month > b.month ? 1 : (a.month < b.month ? -1 : 0)
+          return aMonth > bMonth ? 1 : (aMonth < bMonth ? -1 : 0)
         }
       });
 
@@ -76,13 +82,11 @@
         var startDate = new Date(period.month + '/' + period.startDate + '/' + '2013');
         var endDate = new Date(period.month + '/' + period.endDate + '/' + '2013');
 
-        belowTitle.appendChild(document.createTextNode(formatDate(startDate) + ' - ' + formatDate(endDate)));
-        // aboveTitle.appendChild(document.createTextNode('$' + runningTotalDollars + ' (' + runningTotalContributors + ')'));
+        belowTitle.innerHTML = {11:'Nov', 12:'Dec'}[period.month] + '<br>' + period.startDate + '-' + period.endDate;
 
         graphContainer.appendChild(column);
       });
 
-      document.querySelector('#period-graph-container .graph-amount-marker.top').innerHTML = '$' + formatCurrencyNumber(runningTotalDollars, 2, '.', ',');
       document.querySelector('#period-graph-title').innerHTML = '$' + formatCurrencyNumber(runningTotalDollars, 2, '.', ',');
     }
 
