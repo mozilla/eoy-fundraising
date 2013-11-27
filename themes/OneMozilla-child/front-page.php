@@ -3,11 +3,11 @@
     <div id="dashboard-main" role="main">
       <div class="row" id="first-row">
         <section class="white-bg two-columns">
-        <h3>Total so far: <span id="period-graph-title"></span></h3>
+        <h3>EOY Campaign Total: <span id="period-graph-title"></span></h3>
         <div class="graph-box-container">
           <div id="period-graph-container">
-            <div class="top graph-amount-marker">$100</div>
-            <div class="bottom graph-amount-marker">$0</div>
+            <div hidden class="top graph-amount-marker">$100</div>
+            <div hidden class="bottom graph-amount-marker">$0</div>
             <div class="spacing-container" data-period-bar-container>
               <div class="column">
                 <div class="bar"><div class="above-title"></div><div class="below-title"></div></div>

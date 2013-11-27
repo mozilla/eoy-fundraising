@@ -6,7 +6,7 @@
   }
 
   var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
-  var ignoreBeginningPeriods = 2;
+  var ignoreBeginningPeriods = 3;
 
   function formatDate (date) {
     return (date.getMonth() + 1) + '/' + date.getDate();
