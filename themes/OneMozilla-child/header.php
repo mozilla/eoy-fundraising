@@ -61,7 +61,7 @@
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
     _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
-    _gaq.push(['_setAccount', 'UA-36116321-1']);
+    _gaq.push(['_setAccount', 'UA-35433268-5']);
     _gaq.push(['_setAllowLinker', true]);
     _gaq.push(['_setAllowAnchor', true]);
     _gaq.push(['_trackPageview']);
