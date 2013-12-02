@@ -23,6 +23,9 @@
     var sourceData = bsdData.source;
 
     function createPeriodGraph () {
+      var graphContainer = document.querySelector('*[data-period-bar-container]');
+      var periodGraphContainer = document.querySelector('#period-graph-container');
+
       periodData = periodData.sort(function (a, b) {
         var aMonth = Number(a.month);
         var bMonth = Number(b.month);
@@ -62,22 +65,34 @@
         runningTotalDollars += period.data.amount;
         runningTotalContributors += period.data.contributors;
 
-        bar.style.height = 80 * ( period.data.amount > 0 ? runningTotalDollars : 20 ) / totalDollars + '%';
-        // bar.style.height = 80 * runningTotalDollars / totalDollars + '%';
+        if (period.data.amount > 0) {
+          var h = 80 * runningTotalDollars / totalDollars;
+          // h = 80 * runningTotalDollars / totalDollars + '%';
+          bar.style.height = h + '%';
 
-        var startPercentage = -100 * index;
-        var endPercentage = 100 * (numPeriods - (index - ignoreBeginningPeriods));
+          if (period.data.amount > 1000) {
+            var amountMarker = document.createElement('div');
+            amountMarker.className = 'graph-amount-marker';
+            amountMarker.style.bottom = h + '%';
+            amountMarker.style.width = columnWidth * (index + 1) + '%';
+            amountMarker.innerHTML = '$' + formatCurrencyNumber(runningTotalDollars, 2, '.', ',');
+            periodGraphContainer.appendChild(amountMarker);
+          }
 
-        startPercentage = startPercentage + '%';
-        endPercentage = endPercentage + '%';
+          var startPercentage = -100 * index;
+          var endPercentage = 100 * (numPeriods - (index - ignoreBeginningPeriods));
 
-        bar.style.background = '#43afc7';
-        bar.style.background = '-moz-linear-gradient(left,  #43afc7 ' + startPercentage + ', #90cdd1 ' + endPercentage + ')';
-        bar.style.background = '-webkit-gradient(linear, left top, right top, color-stop(' + startPercentage + ', #43afc7), color-stop(' + endPercentage + ', #90cdd1))';
-        bar.style.background = '-webkit-linear-gradient(left,  #43afc7 ' + startPercentage + ',#90cdd1 ' + endPercentage + ')';
-        bar.style.background = '-o-linear-gradient(left,  #43afc7 ' + startPercentage + ',#90cdd1 ' + endPercentage + ')';
-        bar.style.background = '-ms-linear-gradient(left,  #43afc7 ' + startPercentage + ',#90cdd1 ' + endPercentage + ')';
-        bar.style.background = 'linear-gradient(to right,  #43afc7 ' + startPercentage + ',#90cdd1 ' + endPercentage + ')';
+          startPercentage = startPercentage + '%';
+          endPercentage = endPercentage + '%';
+
+          bar.style.background = '#43afc7';
+          bar.style.background = '-moz-linear-gradient(left,  #43afc7 ' + startPercentage + ', #90cdd1 ' + endPercentage + ')';
+          bar.style.background = '-webkit-gradient(linear, left top, right top, color-stop(' + startPercentage + ', #43afc7), color-stop(' + endPercentage + ', #90cdd1))';
+          bar.style.background = '-webkit-linear-gradient(left,  #43afc7 ' + startPercentage + ',#90cdd1 ' + endPercentage + ')';
+          bar.style.background = '-o-linear-gradient(left,  #43afc7 ' + startPercentage + ',#90cdd1 ' + endPercentage + ')';
+          bar.style.background = '-ms-linear-gradient(left,  #43afc7 ' + startPercentage + ',#90cdd1 ' + endPercentage + ')';
+          bar.style.background = 'linear-gradient(to right,  #43afc7 ' + startPercentage + ',#90cdd1 ' + endPercentage + ')';
+        }
 
         var startDate = new Date(period.month + '/' + period.startDate + '/' + '2013');
         var endDate = new Date(period.month + '/' + period.endDate + '/' + '2013');

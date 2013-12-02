@@ -84,15 +84,21 @@
 .graph-amount-marker {
   position: absolute;
   z-index: 1;
-  height: .5em;
+  height: 1em;
+  font-size: .7em;
+  width: 100%;
+  text-align: left;
+  line-height: 1em;
 }
 
-.graph-amount-marker.top {
-  bottom: 80%;
-}
-
-.graph-amount-marker.bottom {
-  bottom: 0em;
+.graph-amount-marker:after {
+  content: ' ';
+  width: 100%;
+  height: 1px;
+  display: block;
+  border-top: 1px dashed rgba(50, 50, 50, 0.3);
+  position: absolute;
+  bottom: -2px;
 }
 
 .spacing-container {
