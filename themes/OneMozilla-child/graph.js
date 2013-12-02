@@ -45,7 +45,10 @@
       var columnTemplate = graphContainer.querySelector('.column');
       columnTemplate.parentNode.removeChild(columnTemplate);
 
-      var totalDollars = periodData.reduce(function(acc, period) { return acc + period.data.amount; }, 0);
+      var totalDollars = periodData.reduce(function(acc, period) {
+        period.data = period.data || {amount: 0};
+        return acc + period.data.amount;
+      }, 0);
 
       var runningTotalDollars = 0;
       var runningTotalContributors = 0;
@@ -74,7 +77,6 @@
             var amountMarker = document.createElement('div');
             amountMarker.className = 'graph-amount-marker';
             amountMarker.style.bottom = h + '%';
-            amountMarker.style.width = columnWidth * (index + 1) + '%';
             amountMarker.innerHTML = '$' + formatCurrencyNumber(runningTotalDollars, 2, '.', ',');
             periodGraphContainer.appendChild(amountMarker);
           }
