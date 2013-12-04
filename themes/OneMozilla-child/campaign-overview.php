@@ -197,7 +197,7 @@ Template Name: Campaign Overview Page
 					<tbody>
 						<tr>
 							<td><img src="/wp-content/uploads/2013/11/num1.png" /></td>
-							<td>Each month will focus on one of the themes behind our mission: flight, make, and empower.</td>
+							<td>Each month will focus on one of the themes behind our mission: fight, make, and empower.</td>
 						</tr>
 						<tr>
 							<td><img src="/wp-content/uploads/2013/11/num2.png" /></td>
