@@ -1,5 +1,6 @@
 <?php 
     $args = array(
+        'post_status' => 'publish',
         'numberposts' => 1,
         'orderby' => 'post_date',
         'order' => 'DESC',
