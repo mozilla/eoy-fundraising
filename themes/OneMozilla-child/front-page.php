@@ -1,4 +1,22 @@
 <?php get_header(); ?>
+    <div id="thankyou-message">
+      <div class="close">&times;</div>
+      <p class="title">Thanks so much for your support of our year end fundraising campaign!</p>
+      <p class="message">Ready to do more? Check out what our fundraising efforts look like from planning to testing to real-time results. <em>And then help shape our campaign.</em></p>
+      <p class="message">Check out our <b>View Source Fundraising</b> pages and join the conversation today.</p>
+      <script>
+        (function () {
+          setTimeout(function () {
+            var container = document.getElementById('thankyou-message');
+            container.className = 'show';
+
+            container.querySelector('.close').onclick = function () {
+              container.parentNode.removeChild(container);
+            };
+          }, 1500);
+        })();
+      </script>
+    </div>
 
     <div id="dashboard-main" role="main">
       <div class="row" id="first-row">

@@ -700,10 +700,70 @@ section h3{
 
   #first-row .two-columns,
   #second-row .two-columns{
-    width: 250px;  
-    width: calc( 100% - 30px );  /* (padding:15px*2) */ 
+    width: 250px;
+    width: calc( 100% - 30px );  /* (padding:15px*2) */
     height: 100%;
     margin: 10px 0;
   }
 
+}
+
+#thankyou-message {
+  visibility: hidden;
+  opacity: 0;
+  text-align: justify;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 600px;
+  margin-left: -320px;
+  background-color: #fff;
+  box-shadow: 3px 3px 3px #000;
+  z-index: 1000;
+  padding: 20px;
+  -webkit-transition: visibility .15s, opacity .15s;
+     -moz-transition: visibility .15s, opacity .15s;
+      -ms-transition: visibility .15s, opacity .15s;
+       -o-transition: visibility .15s, opacity .15s;
+          transition: visibility .15s, opacity .15s;
+}
+
+#thankyou-message.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+#thankyou-message .title {
+  font-size: 35px;
+  color: rgb(199, 80, 79);
+  text-align: center;
+  margin: 0 0 0.35em 0;
+  line-height: 38px;
+}
+
+#thankyou-message .message {
+  font-size: 15px;
+  padding: 0 20px;
+  margin:  0 0 0.25em 0;
+}
+
+#thankyou-message .close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  width: 18px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  -webkit-transition: background-color .15s;
+     -moz-transition: background-color .15s;
+      -ms-transition: background-color .15s;
+       -o-transition: background-color .15s;
+          transition: background-color .15s;
+}
+
+#thankyou-message .close:hover {
+  background-color: #ccc;
 }
