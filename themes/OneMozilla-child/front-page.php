@@ -6,14 +6,19 @@
       <p class="message">Check out our <b>View Source Fundraising</b> pages and join the conversation today.</p>
       <script>
         (function () {
-          setTimeout(function () {
-            var container = document.getElementById('thankyou-message');
-            container.className = 'show';
+          var container = document.getElementById('thankyou-message');
 
-            container.querySelector('.close').onclick = function () {
-              container.parentNode.removeChild(container);
-            };
-          }, 1500);
+          if (window.location.search && window.location.search.search(/[\?&]thankyou(\W|$)/) > -1) {
+            container.style.display = 'block';
+
+            setTimeout(function () {
+              container.className = 'show';
+
+              container.querySelector('.close').onclick = function () {
+                container.parentNode.removeChild(container);
+              };
+            }, 1000);
+          }
         })();
       </script>
     </div>

@@ -709,6 +709,7 @@ section h3{
 }
 
 #thankyou-message {
+  display: none;
   visibility: hidden;
   opacity: 0;
   text-align: justify;
