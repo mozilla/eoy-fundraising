@@ -418,11 +418,11 @@ section h3{
   text-shadow:0 1px 0 rgba(0,0,0,0.25);
   font-family:'Open Sans Light',sans-serif;
   /*font-family:'Open Sans',sans-serif;*/
-  -webkit-transition:all linear .25s;
-  -moz-transition:all linear .25s;
-  -o-transition:all linear .25s;
-  -ms-transition:all linear .25s;
-  transition:all linear .25s
+  -webkit-transition: all .15s;
+  -moz-transition: all .15s;
+  -o-transition: all .15s;
+  -ms-transition: all .15s;
+  transition: all .15s
 }
 
 .button:hover,
@@ -439,11 +439,6 @@ section h3{
 .button:visited.focus{
   color:#fff;
   text-decoration:none;
-  -webkit-transition:all linear .25s;
-  -moz-transition:all linear .25s;
-  -o-transition:all linear .25s;
-  -ms-transition:all linear .25s;
-  transition:all linear .25s;
   cursor: pointer;
 }
 
@@ -775,4 +770,9 @@ section h3{
 
 #thankyou-message .close:hover {
   background-color: #ccc;
+}
+
+#thankyou-message #showme-button {
+  padding: 10px 20px;
+  margin-left: 15px;
 }

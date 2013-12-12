@@ -3,7 +3,7 @@
       <div data-close="true" class="close">&times;</div>
       <p class="title">Success! Thanks for donating to our year-end fundraising campaign.</p>
       <p class="message">Ready to do more? Check out what our fundraising efforts look like from planning to testing to real-time results. And then help shape our campaign by joining the conversation.</p>
-      <p class="message"><a data-close="true"><b>Show me!</b></a></p>
+      <a id="showme-button" class="button button-red" data-close="true"><b>Show me!</b></a>
     </div>
 
     <div id="dashboard-main" role="main">
