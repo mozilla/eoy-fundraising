@@ -745,7 +745,7 @@ section h3{
 #thankyou-message .message {
   font-size: 15px;
   padding: 0 20px;
-  margin:  0 0 0.25em 0;
+  margin: 0 0 0.25em 0;
 }
 
 #thankyou-message .close {
@@ -774,5 +774,27 @@ section h3{
 
 #thankyou-message #showme-button {
   padding: 10px 20px;
-  margin-left: 15px;
+  margin: 0 auto;
+  display: block;
+  width: 130px;
+  height: 30px;
+  position: relative;
+  top: 50%;
+  margin-top: -30px;
+}
+
+#thankyou-message #showme-wrapper {
+  width: 40%;
+  height: 100%;
+  float: right;
+}
+
+#thankyou-message #message-wrapper {
+  width: 60%;
+  float: left;
+}
+
+#thankyou-message #thankyou-content-wrapper {
+  width: 100%;
+  height: 9em;
 }

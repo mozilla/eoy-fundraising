@@ -2,8 +2,10 @@
     <div id="thankyou-message">
       <div data-close="true" class="close">&times;</div>
       <p class="title">Success! Thanks for donating to our year-end fundraising campaign.</p>
-      <p class="message">Ready to do more? Check out what our fundraising efforts look like from planning to testing to real-time results. And then help shape our campaign by joining the conversation.</p>
-      <a id="showme-button" class="button button-red" data-close="true"><b>Show me!</b></a>
+      <div id="thankyou-content-wrapper">
+        <div id="message-wrapper"><p class="message">Ready to do more? Check out what our fundraising efforts look like from planning to testing to real-time results. And then help shape our campaign by joining the conversation.</p></div>
+        <div id="showme-wrapper"><a id="showme-button" class="button button-red" data-close="true"><b>Show me!</b></a></div>
+      </div>
     </div>
 
     <div id="dashboard-main" role="main">
