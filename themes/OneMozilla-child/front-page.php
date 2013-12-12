@@ -1,26 +1,9 @@
 <?php get_header(); ?>
     <div id="thankyou-message">
-      <div class="close">&times;</div>
-      <p class="title">Thanks so much for your support of our year end fundraising campaign!</p>
-      <p class="message">Ready to do more? Check out what our fundraising efforts look like from planning to testing to real-time results. <em>And then help shape our campaign.</em></p>
-      <p class="message">Check out our <b>View Source Fundraising</b> pages and join the conversation today.</p>
-      <script>
-        (function () {
-          var container = document.getElementById('thankyou-message');
-
-          if (window.location.search && window.location.search.search(/[\?&]thankyou(\W|$)/) > -1) {
-            container.style.display = 'block';
-
-            setTimeout(function () {
-              container.className = 'show';
-
-              container.querySelector('.close').onclick = function () {
-                container.parentNode.removeChild(container);
-              };
-            }, 1000);
-          }
-        })();
-      </script>
+      <div data-close="true" class="close">&times;</div>
+      <p class="title">Success! Thanks for donating to our year-end fundraising campaign.</p>
+      <p class="message">Ready to do more? Check out what our fundraising efforts look like from planning to testing to real-time results. And then help shape our campaign by joining the conversation.</p>
+      <p class="message"><a data-close="true"><b>Show me!</b></a></p>
     </div>
 
     <div id="dashboard-main" role="main">

@@ -178,10 +178,15 @@ a:active {
   margin: 0;
 }
 
-.donate{
+.donate {
   position: absolute;
   bottom: 20px;
   right: 0;
+  visibility: hidden;
+}
+
+#donate-button.show {
+  visibility: visible;
 }
 
 section h3{
@@ -753,7 +758,6 @@ section h3{
   top: 5px;
   right: 5px;
   font-size: 20px;
-  cursor: pointer;
   width: 18px;
   height: 20px;
   line-height: 20px;
@@ -763,6 +767,10 @@ section h3{
       -ms-transition: background-color .15s;
        -o-transition: background-color .15s;
           transition: background-color .15s;
+}
+
+#thankyou-message *[data-close] {
+  cursor: pointer;
 }
 
 #thankyou-message .close:hover {
