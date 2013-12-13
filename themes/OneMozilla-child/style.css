@@ -543,11 +543,124 @@ section h3{
 }
 
 
+#thankyou-message {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 600px;
+  margin-left: -320px;
+  background-color: #fff;
+  box-shadow: 3px 3px 3px #000;
+  z-index: 1000;
+  padding: 20px;
+  -webkit-transition: visibility .15s, opacity .15s;
+     -moz-transition: visibility .15s, opacity .15s;
+      -ms-transition: visibility .15s, opacity .15s;
+       -o-transition: visibility .15s, opacity .15s;
+          transition: visibility .15s, opacity .15s;
+}
 
+#thankyou-message.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+#thankyou-message .title {
+  font-size: 35px;
+  color: rgb(199, 80, 79);
+  text-align: center;
+  margin: 0 0 0.35em 0;
+  line-height: 38px;
+}
+
+#thankyou-message .message {
+  font-size: 15px;
+  padding: 0 20px;
+  margin: 0 0 0.25em 0;
+}
+
+#thankyou-message .close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 20px;
+  width: 18px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  -webkit-transition: background-color .15s;
+     -moz-transition: background-color .15s;
+      -ms-transition: background-color .15s;
+       -o-transition: background-color .15s;
+          transition: background-color .15s;
+}
+
+#thankyou-message *[data-close] {
+  cursor: pointer;
+}
+
+#thankyou-message .close:hover {
+  background-color: #ccc;
+}
+
+#thankyou-message #showme-button {
+  padding: 10px 20px;
+  margin: 0 auto;
+  display: block;
+  width: 130px;
+  height: 30px;
+  line-height: 30px;
+  position: relative;
+  top: 50%;
+  margin-top: -30px;
+}
+
+#thankyou-message #showme-wrapper {
+  width: 37%;
+  height: 100%;
+  float: right;
+}
+
+#thankyou-message #message-wrapper {
+  width: 63%;
+  float: left;
+  padding-top: 5px;
+}
+
+#thankyou-message #thankyou-content-wrapper {
+  width: 100%;
+  height: 8.5em;
+}
 
 
 /* Responsive Design ============================== */
 
+@media only screen and (max-width: 700px) {
+  #thankyou-message {
+    width: 400px;
+    margin-left: -220px;
+  }
+
+  #thankyou-message #showme-button {
+    font-size: 20px;
+    width: 100px;
+  }
+
+  #thankyou-message #thankyou-content-wrapper {
+    height: 9.5em;
+  }
+}
+
+
+@media only screen and (max-width: 991px) {
+  .graph-box-container .above-title,
+  .graph-box-container .below-title {
+    font-size: .8em;
+  }
+}
 
 /*  @Tablet @Layout: 768px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -706,95 +819,4 @@ section h3{
     margin: 10px 0;
   }
 
-}
-
-#thankyou-message {
-  display: none;
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  width: 600px;
-  margin-left: -320px;
-  background-color: #fff;
-  box-shadow: 3px 3px 3px #000;
-  z-index: 1000;
-  padding: 20px;
-  -webkit-transition: visibility .15s, opacity .15s;
-     -moz-transition: visibility .15s, opacity .15s;
-      -ms-transition: visibility .15s, opacity .15s;
-       -o-transition: visibility .15s, opacity .15s;
-          transition: visibility .15s, opacity .15s;
-}
-
-#thankyou-message.show {
-  visibility: visible;
-  opacity: 1;
-}
-
-#thankyou-message .title {
-  font-size: 35px;
-  color: rgb(199, 80, 79);
-  text-align: center;
-  margin: 0 0 0.35em 0;
-  line-height: 38px;
-}
-
-#thankyou-message .message {
-  font-size: 15px;
-  padding: 0 20px;
-  margin: 0 0 0.25em 0;
-}
-
-#thankyou-message .close {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  font-size: 20px;
-  width: 18px;
-  height: 20px;
-  line-height: 20px;
-  text-align: center;
-  -webkit-transition: background-color .15s;
-     -moz-transition: background-color .15s;
-      -ms-transition: background-color .15s;
-       -o-transition: background-color .15s;
-          transition: background-color .15s;
-}
-
-#thankyou-message *[data-close] {
-  cursor: pointer;
-}
-
-#thankyou-message .close:hover {
-  background-color: #ccc;
-}
-
-#thankyou-message #showme-button {
-  padding: 10px 20px;
-  margin: 0 auto;
-  display: block;
-  width: 130px;
-  height: 30px;
-  position: relative;
-  top: 50%;
-  margin-top: -30px;
-}
-
-#thankyou-message #showme-wrapper {
-  width: 37%;
-  height: 100%;
-  float: right;
-}
-
-#thankyou-message #message-wrapper {
-  width: 63%;
-  float: left;
-  padding-top: 5px;
-}
-
-#thankyou-message #thankyou-content-wrapper {
-  width: 100%;
-  height: 8.5em;
 }
