@@ -15,10 +15,6 @@
   <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>">
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-  <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/visualizer.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/graph.css">
-  <link href="//mozorg.cdn.mozilla.net/media/css/tabzilla-min.css" rel="stylesheet" />
-
   <title><?php
     if ( is_single() ) { single_post_title(); echo ' | '; bloginfo('name'); }
     elseif ( is_home() || is_front_page() ) { bloginfo('name'); if (get_bloginfo('description','display')) { echo ' | '. get_bloginfo('description','display'); } fc_page_number(); }
@@ -30,9 +26,16 @@
     elseif ( is_404() ) { _e('Not Found', 'onemozilla'); echo ' | '; bloginfo('name'); }
     else { wp_title(''); echo ' | '; bloginfo('name'); fc_page_number(); }
   ?></title>
+
+  <?php wp_head(); ?>
+
+  <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/visualizer.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/graph.css">
+  <link href="//mozorg.cdn.mozilla.net/media/css/tabzilla-min.css" rel="stylesheet" />
+
 </head>
 
 <body <?php body_class($theme_options[color_scheme]); ?>>
-  <?php get_template_part( 'masthead' ); ?>
   <div id="page">
+  <?php get_template_part( 'masthead' ); ?>
   <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => 'nav', 'container_id' => 'nav-primary', 'fallback_cb' => 'false', ) ); ?>
