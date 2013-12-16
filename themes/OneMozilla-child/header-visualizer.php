@@ -32,7 +32,7 @@
   <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/visualizer.css">
   <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/graph.css">
   <link href="//mozorg.cdn.mozilla.net/media/css/tabzilla-min.css" rel="stylesheet" />
-
+  <meta http-equiv="refresh" content="20; url=<?php echo get_page_link(); ?>" />
 </head>
 
 <body <?php body_class($theme_options[color_scheme]); ?>>
