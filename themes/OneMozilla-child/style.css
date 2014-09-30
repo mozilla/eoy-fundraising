@@ -212,8 +212,8 @@ section h3{
 }
 
 #second-row{
-    width: 617px;
-    width: calc( 66.66666% - 50px );
+    width: 100%;
+    box-sizing: padding-box;
 }
 
 .white-bg{
@@ -234,14 +234,6 @@ section h3{
     text-align: right;
 }
 
-#poll-section{
-    width: 312px;
-    position: absolute;
-    right: 10px;
-    margin: 10px;
-}
-
-
 .two-columns{
     display: inline-block;
     margin: 10px;
@@ -249,21 +241,10 @@ section h3{
     float: left;
 }
 
-#first-row .two-columns{
-    width: 440px;   /* (1000px-20px)/2-(padding:15px*2+margin:10px*2)=490px-50px */
-    width: calc( 50% - 50px );
-    min-height: 300px;
-}
-
 #second-row .two-columns{
     width: 258px;
     width: calc( 50% - 50px );
     height: 230px;
-}
-
-.graph-box-container{
-    position: relative;
-    min-height: 250px;
 }
 
 #older-blog-post-section a,
@@ -302,7 +283,7 @@ section h3{
     margin: 0 15px 10px 0;
     text-align: center;
     line-height: 100%;
-    
+
 }
 
 #blog-post-date #month{
@@ -390,6 +371,12 @@ section h3{
 
 #older-blog-post-widget ul li:first-of-type{
   display: none;
+}
+
+/* Links widget =========== */
+
+#links-widget a {
+  display: block;
 }
 
 
@@ -654,14 +641,6 @@ section h3{
   }
 }
 
-
-@media only screen and (max-width: 991px) {
-  .graph-box-container .above-title,
-  .graph-box-container .below-title {
-    font-size: .8em;
-  }
-}
-
 /*  @Tablet @Layout: 768px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 
@@ -670,20 +649,9 @@ section h3{
       padding: 0;
   }
 
-  #poll-section{
-    right: 0;
-    width: 253px;
-    width: calc( 33.3333% - 0px );
-  }
-
-  #first-row .two-columns{
-    width: 330px;
-    width: calc( 50% - 50px );  /* (margin:10px*2+padding:15px*2) */ 
-  }
-
   #second-row .two-columns{
-    width: 390px;  
-    width: calc( 100% - 50px );  /* (padding:15px*2) */ 
+    width: 390px;
+    width: calc( 100% - 50px );  /* (padding:15px*2) */
     height: 100%;
     margin: 10px;
   }
@@ -693,23 +661,13 @@ section h3{
 /*  @Mobile @Layout: 320px */
 @media only screen and (max-width: 767px) {
 
-  #poll-section{
-    width: 390px;  
-    width: calc( 100% - 30px );  /* (padding:15px*2) */ 
-    position: relative;
-    right: 0;
-    float: left;
-    margin: 10px;
-  }
-
   #second-row{
     width: auto;
   }
 
-  #first-row .two-columns,
   #second-row section{
-    width: 390px;  
-    width: calc( 100% - 30px );  /* (padding:15px*2) */ 
+    width: 390px;
+    width: calc( 100% - 30px );  /* (padding:15px*2) */
     height: 100%;
     margin: 10px 0;
   }
@@ -722,7 +680,7 @@ section h3{
   .wrap {
     padding: 0 22px;
     width: 436px;
-  }  
+  }
   #masthead{
       margin: 0;
   }
@@ -747,24 +705,13 @@ section h3{
     font-size: 1.4em;
   }
 
-
-  #poll-section{
-    width: 390px;  
-    width: calc( 100% - 30px );  /* (padding:15px*2) */ 
-    position: relative;
-    right: 0;
-    float: left;
-    margin: 10px;
-  }
-
   #second-row{
     width: auto;
   }
 
-  #first-row .two-columns,
   #second-row .two-columns{
-    width: 390px;  
-    width: calc( 100% - 30px );  /* (padding:15px*2) */ 
+    width: 390px;
+    width: calc( 100% - 30px );  /* (padding:15px*2) */
     height: 100%;
     margin: 10px 0;
   }
@@ -811,7 +758,6 @@ section h3{
       padding: 0;
   }
 
-  #first-row .two-columns,
   #second-row .two-columns{
     width: 250px;
     width: calc( 100% - 30px );  /* (padding:15px*2) */
