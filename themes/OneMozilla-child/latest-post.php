@@ -1,4 +1,4 @@
-<?php 
+<?php
     $args = array(
         'post_status' => 'publish',
         'numberposts' => 1,
@@ -15,7 +15,7 @@
         $the_post_year = $the_post_date[0];
         $the_post_month = substr( date("F",mktime(0,0,0,$the_post_date[1])), 0, 3);
         $the_post_day = $the_post_date[2];
-        $the_post_url = get_permalink($latest_post["ID"]); 
+        $the_post_url = get_permalink($latest_post["ID"]);
         $the_post_title = $latest_post["post_title"];
         $the_author = get_user_by('id',$latest_post["post_author"]);
         $the_author_avatar = get_avatar( $latest_post["post_author"], 20);
@@ -60,5 +60,5 @@
 
         break;
     }
-    
+
 ?>

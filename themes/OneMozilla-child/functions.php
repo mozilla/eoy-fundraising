@@ -65,6 +65,21 @@ add_action( 'widgets_init', 'twitter_feed_widgets_init' );
 
 
 
+/**
+ * Register Links and widgetized areas.
+ *
+ */
+function links_widgets_init() {
+  register_sidebar( array(
+    'name' => 'Links Section',
+    'id' => 'links-widget',
+    'before_widget' => '<div id="links-widget">',
+    'after_widget' => '</div>'
+  ) );
+}
+add_action( 'widgets_init', 'links_widgets_init' );
+
+
 
 /**
  * Register script and stylesheet for graphs.
