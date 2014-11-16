@@ -2,7 +2,7 @@
   <div class="wrap text-center">
     <h1>End of Year Campaign</h1>
     <h2>
-      Thousands of Mozilla supporters, volunteers and staff around the world believe deeply in our mission and values. <br>
+      Thousands of Mozilla supporters, volunteers and staff around the world believe deeply in our mission and values.
       We are building an Internet that puts the public good before profit.
     </h2>
     <div id="totalizer-container">
