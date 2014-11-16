@@ -105,28 +105,19 @@
 </head>
 
 <body <?php body_class($theme_options[color_scheme]); ?>>
-<div id="page">
-  <div class="wrap">
-    <a href="http://www.mozilla.org/" id="tabzilla">Mozilla</a>
-  </div>
-  <?php if ( (is_front_page()) && ($paged < 1) ) : ?>
-    <?php get_template_part( 'totalizer' ); ?>
-  <?php endif; ?>
-  <div class="wrap">
-    <nav id="nav-access">
-      <ul role="navigation">
-        <li><a href="#content-main" tabindex="1"><?php _e( 'Skip to main content', 'onemozilla' ); ?></a></li>
-        <li><a href="#content-sub" tabindex="2"><?php _e( 'Skip to sidebar', 'onemozilla' ); ?></a></li>
-      <?php if ( is_active_widget( false, false, 'search', true ) || ( !is_active_sidebar('sidebar') ) ) : ?>
-        <li><a href="#search" tabindex="3"><?php _e( 'Skip to blog search', 'onemozilla' ); ?></a></li>
-      <?php endif; ?>
-      </ul>
-    </nav>
+<div id="page"><div class="wrap">
+  <nav id="nav-access">
+    <ul role="navigation">
+      <li><a href="#content-main" tabindex="1"><?php _e( 'Skip to main content', 'onemozilla' ); ?></a></li>
+      <li><a href="#content-sub" tabindex="2"><?php _e( 'Skip to sidebar', 'onemozilla' ); ?></a></li>
+    <?php if ( is_active_widget( false, false, 'search', true ) || ( !is_active_sidebar('sidebar') ) ) : ?>
+      <li><a href="#search" tabindex="3"><?php _e( 'Skip to blog search', 'onemozilla' ); ?></a></li>
+    <?php endif; ?>
+    </ul>
+  </nav>
 
+  <?php get_template_part( 'masthead' ); ?>
 
+  <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => 'nav', 'container_id' => 'nav-primary', 'fallback_cb' => 'false', ) ); ?>
 
-    <?php get_template_part( 'masthead' ); ?>
-
-    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => 'nav', 'container_id' => 'nav-primary', 'fallback_cb' => 'false', ) ); ?>
-
-    <main id="content">
+  <main id="content">

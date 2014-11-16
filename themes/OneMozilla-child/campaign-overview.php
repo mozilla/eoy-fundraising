@@ -36,7 +36,7 @@ Template Name: Campaign Overview Page
 
 	.red-text{
 		color: #DA5527;
-	}	
+	}
 
 	.light-grey-text{
 		color: #888;
@@ -115,7 +115,7 @@ Template Name: Campaign Overview Page
 	}
 
 	#letter-cover .title{
-		font-size: 60px;
+		font-size: 58px;
 		line-height: 125%;
 		padding: 150px 55px;
 	}
