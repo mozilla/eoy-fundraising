@@ -1,9 +1,7 @@
 # Mozilla EOY Fundraising Site #
-===============
-Tracks changes made to /wp-content, excluding /wp-content/uploads
+Tracks changes made to `/wp-content`, excluding `/wp-content/uploads`
 
 ## Themes ##
-===
 
 ### EOY Customized Child Theme ###
 - Our customized theme [OneMozilla-child](https://github.com/mozilla/eoy-fundraising/tree/master/themes/OneMozilla-child) is built as the child theme of the [One Mozilla WordPress theme](https://github.com/mozilla/One-Mozilla-blog/)
