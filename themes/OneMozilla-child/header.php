@@ -68,29 +68,6 @@
 
   </script>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var container = document.getElementById('thankyou-message');
-      var donateButton = document.getElementById('donate-button');
-
-      if (window.location.search && window.location.search.search(/[\?&]thankyou(\W|$)/) > -1) {
-        container.style.display = 'block';
-
-        setTimeout(function () {
-          container.className = 'show';
-
-          Array.prototype.forEach.call(container.querySelectorAll('*[data-close]'), function (el) {
-            el.onclick = function () {
-              container.parentNode.removeChild(container);
-            };
-          });
-        }, 1000);
-      }
-      else {
-        donateButton.className = donateButton.className + ' show';
-      }
-    }, false);
-  </script>
 </head>
 
 <body <?php body_class($theme_options[color_scheme]); ?>>
