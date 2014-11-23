@@ -1,1 +1,239 @@
-@import url("../OneMozilla/style.css");@import url("buttons.css");body{font-family:"Open Sans Light","Lucida Sans","Lucida Grande","Lucida Sans Unicode",Calibri,sans-serif}.left{float:left}.right{float:right}.clear{clear:both}#nav-access{display:none}#page{background-color:#f6f4ec !important;background-image:none !important}.text-center{text-align:center}section h3{color:#c13832;font-size:28px;margin-bottom:20px}.home #masthead{padding:0 0 48px 30px;min-height:0}#eoy-home-banner{background:#fee885;background-image:url(img/MozillaCrowd_EOYVersion.png),linear-gradient(to bottom, #fee885, #fcde3f);background-repeat:no-repeat;background-position:bottom;padding:70px 0 120px 0}#eoy-home-banner h1{font-size:63px}#eoy-home-banner h2{font-size:21px;line-height:1.3;width:80%;margin:0 auto}#totalizer-container{margin:20px 0}#totalizer{display:inline-block;background:#fff;border-radius:5px;font-size:40px;color:#939597;letter-spacing:3px;padding:0 10px}#totalizer small{letter-spacing:0;font-size:15px}#left-column,#right-column,.half-column{box-sizing:border-box;border-radius:5px;float:left;background:#fff;padding:20px}#left-column{width:40%;margin-right:30px}#right-column{width:calc(60% - 30px)}section:not(:last-child){padding-bottom:30px;margin-bottom:30px;border-bottom:1px solid #ccc}.half-column{float:left;width:calc(50% - (30px / 2));background:#fff;margin-top:50px}.half-column:first-of-type{margin-right:calc(30px / 2)}.half-column:last-of-type{margin-left:calc(30px / 2)}.blog-preview:not(:last-child){margin-bottom:30px}.blog-post-date{float:left;border:1px solid #ADADAD;border-radius:5px;background:rgba(204,204,204,0.1);width:35px;padding:5px 5px;margin:0 15px 10px 0;text-align:center;line-height:1}.blog-post-date .month{text-transform:uppercase;font-size:12px}.blog-post-date .day{font-size:20px}.blog-post-date .year{font-size:12px}.blog-preview-header{float:left}.blog-title{font-size:18px;color:#20679e;text-overflow:ellipsis;overflow:hidden;width:calc(100% - 100px)}.blog-preview .author{font-style:italic;color:#bbb}#older-blog-post-widget ul{list-style-type:none}.archive-link{float:right}.donate{position:absolute;bottom:20px;right:0}#get-moz-updates{box-sizing:border-box;width:100%;background:#fee885;border-radius:5px;padding:20px;margin-top:50px;float:left;text-align:center}#get-moz-updates p{display:inline-block;font-size:21px;margin-right:20px;margin-bottom:0}#links-widget a{display:block}#relevant-links,#twitter-feeds{height:200px}@media (max-width:767px){#left-column,#right-column,.half-column,.half-column:last-of-type{width:100%;margin-left:0;margin-right:0}#right-column,.half-column{margin-top:30px}}@media (max-width:479px){#eoy-home-banner h1{font-size:45px}#eoy-home-banner h2{font-size:16px}#totalizer{font-size:25px}#totalizer small{font-size:12px}#get-moz-updates .button{margin-top:20px}}
+@import url("../OneMozilla/style.css");
+@import url("buttons.css");
+/*
+ Theme Name:     One Mozilla Child
+ Theme URI:      https://github.com/mozilla/eoy-fundraising
+ Description:    One Mozilla Child Theme (2014 EOY Campaign Version)
+ Author:         Mozilla
+ Template:       OneMozilla
+*/
+body {
+  font-family: "Open Sans Light", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Calibri, sans-serif;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+#nav-access {
+  display: none;
+}
+#page {
+  background-color: #f6f4ec !important;
+  background-image: none !important;
+}
+/* =========================  */
+/* Typography */
+/* =========================  */
+.text-center {
+  text-align: center;
+}
+section h3 {
+  color: #c13832;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+/* =========================  */
+/* Header */
+/* =========================  */
+.home #masthead {
+  padding: 0 0 48px 30px;
+  min-height: 0;
+}
+/* =========================  */
+/* Totalizer */
+/* =========================  */
+#eoy-home-banner {
+  background: #fee885;
+  background-image: url(img/MozillaCrowd_EOYVersion.png), linear-gradient(to bottom, #fee885, #fcde3f);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 70px 0 120px 0;
+}
+#eoy-home-banner h1 {
+  font-size: 63px;
+}
+#eoy-home-banner h2 {
+  font-size: 21px;
+  line-height: 1.3;
+  width: 80%;
+  margin: 0 auto;
+}
+#totalizer-container {
+  margin: 20px 0;
+}
+#totalizer {
+  display: inline-block;
+  background: #fff;
+  border-radius: 5px;
+  font-size: 40px;
+  color: #939597;
+  letter-spacing: 3px;
+  padding: 0 10px;
+}
+#totalizer #amount {
+  display: inline-block;
+}
+#totalizer small {
+  letter-spacing: 0;
+  font-size: 15px;
+}
+/* =========================  */
+/* Layout */
+/* =========================  */
+#left-column,
+#right-column,
+.half-column {
+  box-sizing: border-box;
+  border-radius: 5px;
+  float: left;
+  background: #fff;
+  padding: 20px;
+}
+#left-column {
+  width: 40%;
+  margin-right: 30px;
+}
+#right-column {
+  width: calc(60% - 30px);
+}
+section:not(:last-child) {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+}
+.half-column {
+  float: left;
+  width: calc(50% - (30px / 2));
+  background: #fff;
+  margin-top: 50px;
+}
+.half-column:first-of-type {
+  margin-right: calc(30px / 2);
+}
+.half-column:last-of-type {
+  margin-left: calc(30px / 2);
+}
+/* =========================  */
+/* Blog Previews */
+/* =========================  */
+.blog-preview:not(:last-child) {
+  margin-bottom: 30px;
+}
+.blog-post-date {
+  float: left;
+  border: 1px solid #ADADAD;
+  border-radius: 5px;
+  /*box-shadow: inset 0 0 5px #ccc;*/
+  background: rgba(204, 204, 204, 0.1);
+  width: 35px;
+  padding: 5px 5px;
+  margin: 0 15px 10px 0;
+  text-align: center;
+  line-height: 1;
+}
+.blog-post-date .month {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.blog-post-date .day {
+  font-size: 20px;
+}
+.blog-post-date .year {
+  font-size: 12px;
+}
+.blog-preview-header {
+  float: left;
+}
+.blog-title {
+  font-size: 18px;
+  color: #20679e;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: calc(100% - 100px);
+}
+.blog-preview .author {
+  font-style: italic;
+  color: #bbb;
+}
+#older-blog-post-widget ul {
+  list-style-type: none;
+}
+.archive-link {
+  float: right;
+}
+/* =========================  */
+/* Other */
+/* =========================  */
+.donate {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+}
+/* =========================  */
+/* Get Mozilla Updates */
+/* =========================  */
+#get-moz-updates {
+  box-sizing: border-box;
+  width: 100%;
+  background: #fee885;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 50px;
+  float: left;
+  text-align: center;
+}
+#get-moz-updates p {
+  display: inline-block;
+  font-size: 21px;
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+/* =========================  */
+/* Widgets */
+/* =========================  */
+#links-widget a {
+  display: block;
+}
+#relevant-links,
+#twitter-feeds {
+  height: 200px;
+}
+/* =========================  */
+/* Responsive */
+/* =========================  */
+@media (max-width: 767px) {
+  #left-column,
+  #right-column,
+  .half-column,
+  .half-column:last-of-type {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #right-column,
+  .half-column {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 479px) {
+  #eoy-home-banner h1 {
+    font-size: 45px;
+  }
+  #eoy-home-banner h2 {
+    font-size: 16px;
+  }
+  #totalizer {
+    font-size: 25px;
+  }
+  #totalizer small {
+    font-size: 12px;
+  }
+  #get-moz-updates .button {
+    margin-top: 20px;
+  }
+}

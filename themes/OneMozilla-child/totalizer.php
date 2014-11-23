@@ -6,7 +6,7 @@
     </h2>
     <div id="totalizer-container">
       <div id="totalizer">
-        <span>$1,234,567</span><small>USD</small>
+        $<div id="amount" class="odometer"></div><small>USD</small>
       </div>
     </div>
     <a href="https://sendto.mozilla.org/page/contribute/givenow-1page?preset=2&source=FMO&ref=EOYFR2014&utm_campaign=EOYFR2014&utm_source=FMO&utm_medium=referral&utm_content=FMO_redbutton" target="_blank" class="button button-red">Donate now</a>
