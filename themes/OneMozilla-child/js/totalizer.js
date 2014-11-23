@@ -1,6 +1,6 @@
 (function() {
 
-  var balance;
+  var amount;
   var currVal;
   var totalizerUI = document.querySelector(".odometer");
 
@@ -32,7 +32,7 @@
     }
     console.log(paypalData);
     if ( paypalData.amount && paypalData.lastAmount ) {
-      balance = paypalData.amount;
+      amount = paypalData.amount;
       currVal = setStartingTotal(parseInt(paypalData.lastAmount));
       console.log(currVal);
       totalizerUI.textContent = currVal;
@@ -45,7 +45,7 @@
       // regularly ticks
       var countUpScheduler = setInterval(function() {
         updateNumber(TICK_ADDI_BASE, TICK_ADDI_RANGE);
-        if ( currVal >= balance ) {
+        if ( currVal >= amount ) {
           console.log("don't update");
           clearInterval(countUpScheduler);
           console.log("killed scheduler");
@@ -55,7 +55,7 @@
       function updateNumber(increBase, increRange) {
         currVal += parseInt(increBase+(Math.random()*increRange));
         console.log(currVal);
-        if ( currVal < balance ) {
+        if ( currVal < amount ) {
           totalizerUI.textContent = currVal;
         }
       }
@@ -69,7 +69,7 @@
   // starting amount for the totalizer should be equal or greater than the previous real income we got from PayPal
   function setStartingTotal(lastRealAmount) {
     // randomly pick a number as the starting amount
-    var startingTotal = balance - (STARTING_GAP_BASE+Math.ceil(Math.random()*STARTING_GAP_RANGE));
+    var startingTotal = amount - (STARTING_GAP_BASE+Math.ceil(Math.random()*STARTING_GAP_RANGE));
     if ( startingTotal < lastRealAmount ) {
       startingTotal = lastRealAmount;
     }
