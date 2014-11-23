@@ -11,7 +11,7 @@
   var INITIAL_TICK_DELAY = 2000; // in milliseconds
   var TICK_ADDI_BASE = 20;
   var TICK_ADDI_RANGE = 20;
-  var TICKER_INTERVAL = parseInt(20000+Math.random()*20000); // in milliseconds
+  var TICKER_INTERVAL = Math.round(20000+Math.random()*20000); // in milliseconds
   console.log("ticks every " + (TICKER_INTERVAL/1000) + " secs");
 
   var xhr = new XMLHttpRequest();
@@ -33,7 +33,7 @@
     console.log(paypalData);
     if ( paypalData.amount && paypalData.lastAmount ) {
       amount = paypalData.amount;
-      currVal = setStartingTotal(parseInt(paypalData.lastAmount));
+      currVal = setStartingTotal(Math.round(paypalData.lastAmount));
       console.log(currVal);
       totalizerUI.textContent = currVal;
 
@@ -53,7 +53,7 @@
       }, TICKER_INTERVAL);
 
       function updateNumber(increBase, increRange) {
-        currVal += parseInt(increBase+(Math.random()*increRange));
+        currVal += Math.round(increBase+(Math.random()*increRange));
         console.log(currVal);
         if ( currVal < amount ) {
           totalizerUI.textContent = currVal;
