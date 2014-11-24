@@ -92,5 +92,17 @@ function graph_script_and_stylesheet() {
 add_action('wp_head', 'graph_script_and_stylesheet');
 
 
+/**
+ * Register script and stylesheet for totalizer
+ *
+ */
+function totalizer_script_and_stylesheet() {
+    wp_enqueue_style('odometer-style', get_stylesheet_directory_uri() . '/css/odometer-theme-minimal.css' );
+    wp_enqueue_script( 'odometer-script', get_stylesheet_directory_uri() . '/js/odometer.min.js' );
+    wp_enqueue_script( 'totalizer-script', get_stylesheet_directory_uri() . '/js/totalizer.js' );
+}
+add_action('wp_head', 'totalizer_script_and_stylesheet');
+
+
 
 ?>
