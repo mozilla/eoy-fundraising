@@ -2,15 +2,8 @@
 
   <!-- Left column starts =======================  -->
   <div id="left-column">
-    <section>
-      <h3>Donors by Country</h3>
-      <div style="height: 450px;border: 1px solid #eee; color: #888;">placeholder for the visualization</div>
-    </section>
-
-    <section>
-      <h3>Donors by Source</h3>
-      <div style="height: 450px;border: 1px solid #eee; color: #888;">placeholder for the visualization</div>
-    </section>
+    <div id="eoy-2014-charts">
+    </div>
   </div>
   <!-- Left column ends =======================  -->
 
@@ -54,7 +47,5 @@
 
 
 
-
-
-    </div><!-- #content-main -->
+<!-- #content-main -->
 <?php get_footer(); ?>

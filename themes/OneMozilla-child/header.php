@@ -4,6 +4,7 @@
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-type" content="text/html; charset=UTF8">
 
   <!-- For Facebook -->
   <meta property="og:site_name" content="<?php bloginfo('name'); ?>">

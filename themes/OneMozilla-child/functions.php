@@ -93,16 +93,23 @@ add_action('wp_head', 'graph_script_and_stylesheet');
 
 
 /**
- * Register script and stylesheet for totalizer
+ * Register script and stylesheet for 2014 EOY Version.
  *
  */
-function totalizer_script_and_stylesheet() {
-    wp_enqueue_style('odometer-style', get_stylesheet_directory_uri() . '/css/odometer-theme-minimal.css' );
-    wp_enqueue_script( 'odometer-script', get_stylesheet_directory_uri() . '/js/odometer.min.js' );
-    wp_enqueue_script( 'totalizer-script', get_stylesheet_directory_uri() . '/js/totalizer.js' );
-}
-add_action('wp_head', 'totalizer_script_and_stylesheet');
+function eoy_2014_theme_scripts_and_stylesheets() {
+  // totalizer
+  wp_enqueue_style( 'odometer-style', get_stylesheet_directory_uri() . '/css/odometer-theme-minimal.css' );
+  wp_enqueue_script( 'odometer-script', get_stylesheet_directory_uri() . '/js/odometer.min.js', [], '', true );
+  wp_enqueue_script( 'totalizer-script', get_stylesheet_directory_uri() . '/js/totalizer.js', [ 'odometer-script' ], '', true );
 
+  // visualizations
+  wp_enqueue_style( 'eoy-2014-charts-style', get_stylesheet_directory_uri() . '/bower_components/mofo-eoy-charts/charts.css' );
+  wp_enqueue_script( 'jquery-script', get_stylesheet_directory_uri() . '/js/jquery-2.1.1.min.js', [], '', true );
+  wp_enqueue_script( 'd3-script', get_stylesheet_directory_uri() . '/bower_components/d3/d3.min.js', [ 'jquery-script' ], '', true );
+  wp_enqueue_script( 'eoy-2014-charts-script', get_stylesheet_directory_uri() . '/bower_components/mofo-eoy-charts/charts.js', [ 'd3-script' ], '', true );
+  wp_enqueue_script( 'ui-script', get_stylesheet_directory_uri() . '/js/ui.js', [ 'eoy-2014-charts-script' ], '', true );
+}
+add_action('wp_enqueue_scripts', 'eoy_2014_theme_scripts_and_stylesheets');
 
 
 ?>
