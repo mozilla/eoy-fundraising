@@ -4,8 +4,8 @@
   var currVal;
   var totalizerUI = document.querySelector(".odometer");
 
-  var STARTING_GAP_BASE = 3000;
-  var STARTING_GAP_RANGE = 2000;
+  var STARTING_GAP_BASE = 8000;
+  var STARTING_GAP_RANGE = 5000;
   var INITIAL_TICK_ADDI_BASE = 50;
   var INITIAL_TICK_ADDI_RANGE = 100;
   var INITIAL_TICK_DELAY = 2000; // in milliseconds
