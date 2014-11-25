@@ -109,7 +109,7 @@ section h3,
 }
 #right-column {
   /*width: calc( 60% - @gutter );*/
-  width: calc(100% - 30px);
+  width: 100%;
 }
 section:not(:last-child) {
   padding-bottom: 30px;
