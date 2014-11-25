@@ -4,6 +4,7 @@
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-type" content="text/html; charset=UTF8">
 
   <!-- For Facebook -->
   <meta property="og:site_name" content="<?php bloginfo('name'); ?>">
@@ -35,7 +36,7 @@
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/css/socialshare.css">
   <?php endif; ?>
   <link rel="stylesheet" type="text/css" media="screen,projection" href="<?php bloginfo('stylesheet_url'); ?>">
-  <link rel="stylesheet" type="text/css" media="all" href="https://www.mozilla.org/tabzilla/media/css/tabzilla.css">
+  <link rel="stylesheet" type="text/css" media="all" href="//www.mozilla.org/tabzilla/media/css/tabzilla.css">
   <link rel="stylesheet" type="text/css" media="print" href="<?php echo get_template_directory_uri(); ?>/css/print.css">
   <!--[if lte IE 7]><link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/css/ie7.css"><![endif]-->
 
@@ -58,66 +59,41 @@
   <?php wp_head(); ?>
 
   <script>
-    var _gaq = _gaq || [];
-    var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
-    _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
-    _gaq.push(['_setAccount', 'UA-35433268-5']);
-    _gaq.push(['_setAllowLinker', true]);
-    _gaq.push(['_setAllowAnchor', true]);
-    _gaq.push(['_trackPageview']);
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    (function() {
-        var ga = document.createElement('script');
-        ga.type = 'text/javascript';
-        ga.async = true;
+    ga('create', 'UA-49796218-14', 'auto');
+    ga('send', 'pageview');
 
-        var prefix = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www');
-        ga.src = prefix + '.google-analytics.com/ga.js';
-
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(ga, s);
-    })();
   </script>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var container = document.getElementById('thankyou-message');
-      var donateButton = document.getElementById('donate-button');
-
-      if (window.location.search && window.location.search.search(/[\?&]thankyou(\W|$)/) > -1) {
-        container.style.display = 'block';
-
-        setTimeout(function () {
-          container.className = 'show';
-
-          Array.prototype.forEach.call(container.querySelectorAll('*[data-close]'), function (el) {
-            el.onclick = function () {
-              container.parentNode.removeChild(container);
-            };
-          });
-        }, 1000);
-      }
-      else {
-        donateButton.className = donateButton.className + ' show';
-      }
-    }, false);
-  </script>
 </head>
 
 <body <?php body_class($theme_options[color_scheme]); ?>>
-<div id="page"><div class="wrap">
-  <nav id="nav-access">
-    <ul role="navigation">
-      <li><a href="#content-main" tabindex="1"><?php _e( 'Skip to main content', 'onemozilla' ); ?></a></li>
-      <li><a href="#content-sub" tabindex="2"><?php _e( 'Skip to sidebar', 'onemozilla' ); ?></a></li>
-    <?php if ( is_active_widget( false, false, 'search', true ) || ( !is_active_sidebar('sidebar') ) ) : ?>
-      <li><a href="#search" tabindex="3"><?php _e( 'Skip to blog search', 'onemozilla' ); ?></a></li>
-    <?php endif; ?>
-    </ul>
-  </nav>
+<div id="page">
+  <div class="wrap">
+    <a href="http://www.mozilla.org/" id="tabzilla">Mozilla</a>
+  </div>
+  <?php if ( (is_front_page()) && ($paged < 1) ) : ?>
+    <?php get_template_part( 'totalizer' ); ?>
+  <?php endif; ?>
+  <div class="wrap">
+    <nav id="nav-access">
+      <ul role="navigation">
+        <li><a href="#content-main" tabindex="1"><?php _e( 'Skip to main content', 'onemozilla' ); ?></a></li>
+        <li><a href="#content-sub" tabindex="2"><?php _e( 'Skip to sidebar', 'onemozilla' ); ?></a></li>
+      <?php if ( is_active_widget( false, false, 'search', true ) || ( !is_active_sidebar('sidebar') ) ) : ?>
+        <li><a href="#search" tabindex="3"><?php _e( 'Skip to blog search', 'onemozilla' ); ?></a></li>
+      <?php endif; ?>
+      </ul>
+    </nav>
 
-  <?php get_template_part( 'masthead' ); ?>
 
-  <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => 'nav', 'container_id' => 'nav-primary', 'fallback_cb' => 'false', ) ); ?>
 
-  <main id="content">
+    <?php get_template_part( 'masthead' ); ?>
+
+    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => 'nav', 'container_id' => 'nav-primary', 'fallback_cb' => 'false', ) ); ?>
+
+    <main id="content">

@@ -3,15 +3,6 @@
     </main><!-- #content -->
   </div> <!-- /.wrap -->
 
-  <div id="get-moz-updates">
-    <div class="wrap">
-        Get Mozilla updates
-        <div id="go-to-newsletter">
-          <a href="//sendto.mozilla.org/page/s/sign-up-for-mozilla/" target="_blank" class="button button-blue">Go to sign up page</a>
-        </div>
-    </div>
-  </div>
-
 </div><!-- /#page -->
 
 
@@ -38,7 +29,7 @@
   </div>
 </footer>
 
-<script src="https://www.mozilla.org/tabzilla/media/js/tabzilla.js"></script>
+<script src="//www.mozilla.org/tabzilla/media/js/tabzilla.js"></script>
 
 <?php wp_footer(); ?>
 

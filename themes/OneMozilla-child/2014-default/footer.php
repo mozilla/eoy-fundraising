@@ -1,7 +1,19 @@
 <?php $theme_options = onemozilla_get_theme_options(); ?>
 
-  </main><!-- #content -->
-</div></div><!-- /.wrap /#page -->
+    </main><!-- #content -->
+  </div> <!-- /.wrap -->
+
+  <div id="get-moz-updates">
+    <div class="wrap">
+        Get Mozilla updates
+        <div id="go-to-newsletter">
+          <a href="//sendto.mozilla.org/page/s/sign-up-for-mozilla/" target="_blank" class="button button-blue">Go to sign up page</a>
+        </div>
+    </div>
+  </div>
+
+</div><!-- /#page -->
+
 
 <footer id="site-info" role="contentinfo">
   <div class="wrap">
@@ -26,7 +38,7 @@
   </div>
 </footer>
 
-<script src="//mozorg.cdn.mozilla.net/tabzilla/tabzilla.js"></script>
+<script src="https://www.mozilla.org/tabzilla/media/js/tabzilla.js"></script>
 
 <?php wp_footer(); ?>
 
