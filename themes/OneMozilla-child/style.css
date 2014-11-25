@@ -209,6 +209,9 @@ section:not(:last-child) {
 #links-widget a {
   display: block;
 }
+#relevant-links ul {
+  list-style-type: none;
+}
 #relevant-links,
 #twitter-feeds {
   height: 200px;
