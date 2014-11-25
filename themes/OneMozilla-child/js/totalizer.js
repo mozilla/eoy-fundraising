@@ -12,12 +12,11 @@
   var TICK_ADDI_BASE = 20;
   var TICK_ADDI_RANGE = 20;
   var TICKER_INTERVAL = Math.round(20000+Math.random()*20000); // in milliseconds
-  console.log("ticks every " + (TICKER_INTERVAL/1000) + " secs");
+  // console.log("ticks every " + (TICKER_INTERVAL/1000) + " secs");
 
   var xhr = new XMLHttpRequest();
   xhr.open("GET", "wp-content/themes/OneMozilla-child/data/totalizer.json", true);
   xhr.onerror = function(error) {
-    console.log("XMLHttpRequest error");
     console.log(error);
     hideTotalizer();
   };
@@ -30,11 +29,11 @@
       hideTotalizer();
       return;
     }
-    console.log(paypalData);
+    // console.log(paypalData);
     if ( paypalData.amount && paypalData.lastAmount ) {
       amount = paypalData.amount;
       currVal = setStartingTotal(Math.round(paypalData.lastAmount));
-      console.log(currVal);
+      // console.log(currVal);
       totalizerUI.textContent = currVal;
 
       // initial tick, the animation starts soon after page load
@@ -46,15 +45,15 @@
       var countUpScheduler = setInterval(function() {
         updateNumber(TICK_ADDI_BASE, TICK_ADDI_RANGE);
         if ( currVal >= amount ) {
-          console.log("don't update");
+          // console.log("don't update");
           clearInterval(countUpScheduler);
-          console.log("killed scheduler");
+          // console.log("killed scheduler");
         }
       }, TICKER_INTERVAL);
 
       function updateNumber(increBase, increRange) {
         currVal += Math.round(increBase+(Math.random()*increRange));
-        console.log(currVal);
+        // console.log(currVal);
         if ( currVal < amount ) {
           totalizerUI.textContent = currVal;
         }

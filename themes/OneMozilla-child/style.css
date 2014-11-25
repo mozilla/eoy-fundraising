@@ -242,6 +242,7 @@ section:not(:last-child) {
   }
   #totalizer {
     font-size: 25px;
+    letter-spacing: 1px;
   }
   #totalizer small {
     font-size: 12px;
