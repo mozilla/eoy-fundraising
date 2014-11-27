@@ -20,17 +20,19 @@
         $the_author = get_user_by('id',$latest_post["post_author"]);
         $the_author_page = get_author_posts_url($latest_post["post_author"]);
         $the_author_name = $the_author->display_name;
+        $word_cap = 100;
         if ( $latest_post["post_excerpt"] ){
-          $the_excerpt = strip_tags( $latest_post["post_excerpt"] );
+          $the_excerpt = $latest_post["post_excerpt"];
         }else{
-          $the_excerpt = strip_tags( $latest_post["post_content"] );
+          $the_excerpt = $latest_post["post_content"];
         }
-        if ( str_word_count($the_excerpt) > 100 ){
+        $the_excerpt = strip_shortcodes(strip_tags( apply_filters('the_content', $the_excerpt), "<a><br><p>" ));
+        if ( str_word_count($the_excerpt) > $word_cap ){
           $continue_reading_tag = "Continue reading";
         }
-        // show the first 50 words
+        // show the first x words
         $the_excerpt = explode(" ", $the_excerpt);
-        $the_excerpt = implode(" ",array_slice($the_excerpt,0,100));
+        $the_excerpt = implode(" ",array_slice($the_excerpt,0,$word_cap));
         // add wrapper
         echo "<div class='blog-preview'>";
         // post date
