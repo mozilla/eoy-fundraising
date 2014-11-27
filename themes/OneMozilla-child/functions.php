@@ -100,7 +100,8 @@ function eoy_2014_theme_scripts_and_stylesheets() {
   // totalizer
   wp_enqueue_style( 'odometer-style', get_stylesheet_directory_uri() . '/css/odometer-theme-minimal.css' );
   wp_enqueue_script( 'odometer-script', get_stylesheet_directory_uri() . '/js/odometer.min.js', array(), '', true );
-  wp_enqueue_script( 'totalizer-script', get_stylesheet_directory_uri() . '/js/totalizer.js', array('odometer-script'), '', true );
+  // wp_enqueue_script( 'totalizer-script', get_stylesheet_directory_uri() . '/js/totalizer.js', array('odometer-script'), '', true );
+  wp_enqueue_script( 'totalizer-static-script', get_stylesheet_directory_uri() . '/js/totalizer-static.js', array('odometer-script'), '', true );
 
   // visualizations
   wp_enqueue_style( 'eoy-2014-charts-style', get_stylesheet_directory_uri() . '/css/charts.css' );
