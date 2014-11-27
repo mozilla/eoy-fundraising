@@ -104,9 +104,11 @@ section h3,
 #left-column {
   width: 40%;
   margin-right: 30px;
+  display: none;
 }
 #right-column {
-  width: calc(60% - 30px);
+  /*width: calc( 60% - @gutter );*/
+  width: 100%;
 }
 section:not(:last-child) {
   padding-bottom: 30px;
