@@ -169,6 +169,9 @@ section:not(:last-child) {
   font-style: italic;
   color: #bbb;
 }
+.blog-excerpt p {
+  margin: 0 0 10px 0;
+}
 #older-blog-post-widget ul {
   list-style-type: none;
 }
