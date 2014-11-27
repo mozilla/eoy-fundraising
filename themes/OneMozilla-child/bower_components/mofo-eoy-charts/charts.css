@@ -11,9 +11,12 @@
 }
 
 .pie-chart-key {
-  display: flex;
-  flex-wrap: wrap;
+
 }
+  .pie-chart-key .group {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .pie-chart-key p {
     font-size: 16px;
     flex-basis: 50%;
@@ -44,3 +47,20 @@
       font-weight: 700;
       color: #444;
     }
+
+.btn-toggle {
+  border: 0;
+  background-color: #19B7E4;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  width: 1.5em;
+  text-align: center;
+  margin: 20px auto;
+  display: block;
+}
+.btn-toggle:focus,
+.btn-toggle:hover {
+  outline: 0;
+  background-color: #1D6FB7;
+}
