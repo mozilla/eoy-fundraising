@@ -1,0 +1,16 @@
+{
+  "name": "fundraising.mozilla.org",
+  "version": "2.0.0",
+  "homepage": "https://github.com/mozilla/eoy-fundraising",
+  "authors": "Mozilla",
+  "description": "Moziall Fundraising Website - EOY 2014 Version",
+  "license": "MPL",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules"
+  ],
+  "dependencies": {
+    "mofo-eoy-charts": "https://github.com/mozilla/eoy-charts.git"
+  }
+}
