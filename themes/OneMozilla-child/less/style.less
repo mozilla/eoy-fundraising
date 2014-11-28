@@ -16,6 +16,7 @@
 @mozilla-red: #C13832;
 @yellow-bg: #FEE885;
 @yellow-bg-light: #FCDE3F;
+@totalizer-grey: #939597;
 
 @border-radius: 5px;
 
@@ -97,6 +98,12 @@ section h3,
 
 #totalizer-container {
   margin: 20px 0;
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 0;
+    color: @totalizer-grey;
+  }
 }
 
 #totalizer {
@@ -104,13 +111,19 @@ section h3,
   background: #fff;
   border-radius: @border-radius;
   font-size: 40px;
-  color: #939597;
+  color: @totalizer-grey;
   letter-spacing: 3px;
   padding: 0 10px;
+  .dollar-sign {
+    position: relative;
+    top: 3px;
+  }
   #amount {
     display: inline-block;
   }
   small {
+    position: relative;
+    top: 3px;
     letter-spacing: 0;
     font-size: 15px;
   }
@@ -324,8 +337,14 @@ section:not(:last-child) {
     font-size: 16px;
   }
 
+  #totalizer-container {
+    p {
+      font-size: 14px;
+    }
+  }
+
   #totalizer {
-    font-size: 25px;
+    font-size: 30px;
     letter-spacing: 1px;
     small {
       font-size: 12px;
