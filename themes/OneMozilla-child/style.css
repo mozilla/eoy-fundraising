@@ -67,6 +67,12 @@ section h3,
 #totalizer-container {
   margin: 20px 0;
 }
+#totalizer-container p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 0;
+  color: #939597;
+}
 #totalizer {
   display: inline-block;
   background: #fff;
@@ -76,10 +82,16 @@ section h3,
   letter-spacing: 3px;
   padding: 0 10px;
 }
+#totalizer .dollar-sign {
+  position: relative;
+  top: 3px;
+}
 #totalizer #amount {
   display: inline-block;
 }
 #totalizer small {
+  position: relative;
+  top: 3px;
   letter-spacing: 0;
   font-size: 15px;
 }
@@ -242,8 +254,11 @@ section:not(:last-child) {
   #eoy-home-banner h2 {
     font-size: 16px;
   }
+  #totalizer-container p {
+    font-size: 14px;
+  }
   #totalizer {
-    font-size: 25px;
+    font-size: 30px;
     letter-spacing: 1px;
   }
   #totalizer small {
