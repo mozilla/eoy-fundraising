@@ -5,7 +5,7 @@
     var totalizerUI = document.querySelector(totalizerSelector);
 
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "wp-content/themes/OneMozilla-child/data/totalizer.json", true);
+    xhr.open("GET", "wp-content/themes/OneMozilla-child/totalizer.json", true);
     xhr.onerror = function(error) {
       console.log(error);
       hideTotalizer();
