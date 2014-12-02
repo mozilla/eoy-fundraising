@@ -33,5 +33,21 @@
 
 <?php wp_footer(); ?>
 
+<script>
+  // some janky way to update the totalizer via WP Dashboard Editor
+  (function() {
+    // Novemeber total payment received
+    var NOV_TOTAL = 362152;
+
+    var totalizerSelector = ".odometer";
+    if ( document.querySelector(totalizerSelector) ) {
+      // timestamp updated, Date.now()): 1417545478512
+      // update the current December total below, integer only
+      var decCurrentTotal = 58995;
+      document.querySelector(totalizerSelector).textContent = NOV_TOTAL + decCurrentTotal;
+    }
+  })();
+</script>
+
 </body>
 </html>
