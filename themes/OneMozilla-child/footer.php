@@ -38,14 +38,23 @@
   (function() {
     // Novemeber total payment received
     var NOV_TOTAL = 362152;
-
-    var totalizerSelector = ".odometer";
-    if ( document.querySelector(totalizerSelector) ) {
-      // timestamp updated, Date.now()): 1417545478512
-      // update the current December total below, integer only
-      var decCurrentTotal = 58995;
-      document.querySelector(totalizerSelector).textContent = NOV_TOTAL + decCurrentTotal;
+    var updateTotalizer = function() {
+      var totalizerSelector = ".odometer";
+      if ( document.querySelector(totalizerSelector) ) {
+        // *** timestamp updated, Date.now()): 1417545478512
+        // *** update the current December total below, integer only
+        var decCurrentTotal = 58995;
+        var currTotal = NOV_TOTAL + decCurrentTotal;
+        if ( typeof currTotal === 'number' ) {
+          document.querySelector(totalizerSelector).textContent = NOV_TOTAL + decCurrentTotal;
+        } else {
+          document.querySelector("#totalizer-container").style.display = "none";
+          document.querySelector(".button.button-red").style.marginTop = "45px";
+        }
+      }
     }
+    // to start the animation
+    setTimeout(updateTotalizer, 10); // in milliseconds
   })();
 </script>
 
