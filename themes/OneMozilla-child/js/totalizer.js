@@ -6,8 +6,6 @@
 
   var TICKER_INTERVAL = 5000; // in milliseconds
 
-  getTotal();
-
   function getTotal() {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "https://d3gxuc3bq48qfa.cloudfront.net/eoy-2014-total", true);
@@ -32,7 +30,6 @@
     xhr.send();
   }
 
-
   function showTotalizer() {
     totalizerUI.textContent = amount;
     document.querySelector("#totalizer-container").style.display = "block";
@@ -43,5 +40,7 @@
     document.querySelector("#totalizer-container").style.display = "none";
     document.querySelector("#eoy-banner-donate-btn").style.marginTop = "45px";
   }
+
+  getTotal();
 
 })();
