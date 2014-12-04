@@ -1,82 +1,46 @@
 (function() {
 
-  var amount;
-  var currVal;
+  var paypalData;
+  var amount = 0;
   var totalizerUI = document.querySelector(".odometer");
 
-  var STARTING_GAP_BASE = 8000;
-  var STARTING_GAP_RANGE = 5000;
-  var INITIAL_TICK_ADDI_BASE = 50;
-  var INITIAL_TICK_ADDI_RANGE = 100;
-  var INITIAL_TICK_DELAY = 2000; // in milliseconds
-  var TICK_ADDI_BASE = 20;
-  var TICK_ADDI_RANGE = 20;
-  var TICKER_INTERVAL = Math.round(20000+Math.random()*20000); // in milliseconds
-  // console.log("ticks every " + (TICKER_INTERVAL/1000) + " secs");
+  var TICKER_INTERVAL = 5000; // in milliseconds
 
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "wp-content/themes/OneMozilla-child/data/totalizer.json", true);
-  xhr.onerror = function(error) {
-    console.log(error);
-    hideTotalizer();
-  };
-  xhr.onload = function() {
-    var paypalData;
-    try {
-      paypalData = JSON.parse(xhr.responseText);
-    } catch(e) {
-      console.log(e);
+  function getTotal() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://d3gxuc3bq48qfa.cloudfront.net/eoy-2014-total", true);
+    xhr.onerror = function(error) {
+      console.error(error);
       hideTotalizer();
-      return;
-    }
-    // console.log(paypalData);
-    if ( paypalData.amount && paypalData.lastAmount ) {
-      amount = paypalData.amount;
-      currVal = setStartingTotal(Math.round(paypalData.lastAmount));
-      // console.log(currVal);
-      totalizerUI.textContent = currVal;
-
-      // initial tick, the animation starts soon after page load
-      setTimeout(function(){
-        updateNumber(INITIAL_TICK_ADDI_BASE, INITIAL_TICK_ADDI_RANGE);
-      }, INITIAL_TICK_DELAY);
-
-      // regularly ticks
-      var countUpScheduler = setInterval(function() {
-        updateNumber(TICK_ADDI_BASE, TICK_ADDI_RANGE);
-        if ( currVal >= amount ) {
-          // console.log("don't update");
-          clearInterval(countUpScheduler);
-          // console.log("killed scheduler");
-        }
-      }, TICKER_INTERVAL);
-
-      function updateNumber(increBase, increRange) {
-        currVal += Math.round(increBase+(Math.random()*increRange));
-        // console.log(currVal);
-        if ( currVal < amount ) {
-          totalizerUI.textContent = currVal;
+    };
+    xhr.onload = function() {
+      if ( xhr.status === 200 ) {
+        try {
+          paypalData = JSON.parse(xhr.responseText);
+          amount = Math.round(paypalData.sum);
+          showTotalizer();
+          setTimeout(getTotal, TICKER_INTERVAL);
+        } catch(e) {
+          console.error(e);
+          hideTotalizer();
         }
       }
-    } else {
-      hideTotalizer();
-    }
-  };
-  xhr.overrideMimeType("application/json");
-  xhr.send();
+    };
+    xhr.overrideMimeType("application/json");
+    xhr.send();
+  }
 
-  // starting amount for the totalizer should be equal or greater than the previous real income we got from PayPal
-  function setStartingTotal(lastRealAmount) {
-    // randomly pick a number as the starting amount
-    var startingTotal = amount - (STARTING_GAP_BASE+Math.ceil(Math.random()*STARTING_GAP_RANGE));
-    if ( startingTotal < lastRealAmount ) {
-      startingTotal = lastRealAmount;
-    }
-    return startingTotal;
+  function showTotalizer() {
+    totalizerUI.textContent = amount;
+    document.querySelector("#totalizer-container").style.display = "block";
+    document.querySelector("#eoy-banner-donate-btn").style.marginTop = "0";
   }
 
   function hideTotalizer() {
-    document.querySelector("#totalizer").style.display = "none";
+    document.querySelector("#totalizer-container").style.display = "none";
+    document.querySelector("#eoy-banner-donate-btn").style.marginTop = "45px";
   }
+
+  getTotal();
 
 })();
