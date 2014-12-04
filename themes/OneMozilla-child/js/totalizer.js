@@ -12,7 +12,7 @@
   function getTotal() {
     console.log("get Total")
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://d3gxuc3bq48qfa.cloudfront.net/eoy-2014-total", true);
+    xhr.open("GET", "https://d3gxuc3bq48qfa.cloudfront.net/eoy-2014-total?callback=me", true);
     xhr.onerror = function(error) {
       console.log(error);
       hideTotalizer();
