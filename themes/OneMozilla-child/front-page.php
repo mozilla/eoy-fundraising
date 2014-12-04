@@ -26,7 +26,7 @@
   <div id="get-moz-updates">
     <p>Get important updates about Mozilla’s work</p>
     <!-- <div class="btn-container"> -->
-      <a href="//sendto.mozilla.org/page/s/sign-up-for-mozilla/" target="_blank" class="button button-red">Sign up</a>
+      <a href="//sendto.mozilla.org/page/s/sign-up-for-mozilla/" target="_blank" id="eoy-banner-donate-btn" class="button button-red">Sign up</a>
     <!-- </div> -->
   </div>
 
