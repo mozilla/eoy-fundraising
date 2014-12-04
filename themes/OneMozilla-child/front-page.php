@@ -37,7 +37,7 @@
       <ul>
         <li><a href="//intangibleblog.files.wordpress.com/2014/03/mozilla-fundraising-infographic-web.png ">2013 End of Year Campaign Infographic</a></li>
         <li><a href="//wiki.mozilla.org/Donate">Donation FAQ</a></li>
-        <li><a href="//sendto.mozilla.org/page/contribute/givenow-1page?preset=2&source=FMO&ref=EOYFR2014&utm_campaign=EOYFR2014&utm_source=FMO&utm_medium=referral&utm_content=FMO_donateTXT">Donate Now</a></li>
+        <li><a href="//sendto.mozilla.org/page/contribute/givenow-seq?preset=2&source=FMO&ref=EOYFR2014&utm_campaign=EOYFR2014&utm_source=FMO&utm_medium=referral&utm_content=FMO_donateTXT">Donate Now</a></li>
       </ul>
     </div>
 
