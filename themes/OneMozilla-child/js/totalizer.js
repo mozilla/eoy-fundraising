@@ -3,33 +3,30 @@
   var paypalData;
   var totalizerUI = document.querySelector(".odometer");
 
-  var TICKER_INTERVAL = 10000; // in milliseconds
-  console.log("ticks every " + (TICKER_INTERVAL/1000) + " secs");
+  var TICKER_INTERVAL = 5000; // in milliseconds
+  // console.log("ticks every " + (TICKER_INTERVAL/1000) + " secs");
 
   getTotal();
   setInterval(getTotal, TICKER_INTERVAL);
 
   function getTotal() {
-    console.log("get Total")
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://d3gxuc3bq48qfa.cloudfront.net/eoy-2014-total?jsonp=me", true);
+    xhr.open("GET", "https://d3gxuc3bq48qfa.cloudfront.net/eoy-2014-total", true);
     xhr.onerror = function(error) {
       console.log(error);
       hideTotalizer();
     };
-    xhr.onload = function(event) {
-      console.log(xhr.responseText, event);
-      if (request.status >= 200 && request.status < 400) {
+    xhr.onload = function() {
+      if (xhr.status >= 200 && xhr.status < 400) {
         try {
           paypalData = JSON.parse(xhr.responseText);
-          console.log(paypalData);
         } catch(e) {
           console.log(e);
           hideTotalizer();
           return;
         }
         showTotalizer();
-        totalizerUI.textContent = paypalData.sum;
+        totalizerUI.textContent = Math.round(paypalData.sum);
       }
     };
     xhr.overrideMimeType("application/json");
