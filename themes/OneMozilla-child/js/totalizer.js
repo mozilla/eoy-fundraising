@@ -1,32 +1,31 @@
 (function() {
 
   var paypalData;
+  var amount = 0;
   var totalizerUI = document.querySelector(".odometer");
 
   var TICKER_INTERVAL = 5000; // in milliseconds
-  // console.log("ticks every " + (TICKER_INTERVAL/1000) + " secs");
 
   getTotal();
-  setInterval(getTotal, TICKER_INTERVAL);
 
   function getTotal() {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "https://d3gxuc3bq48qfa.cloudfront.net/eoy-2014-total", true);
     xhr.onerror = function(error) {
-      console.log(error);
+      console.error(error);
       hideTotalizer();
     };
     xhr.onload = function() {
-      if (xhr.status >= 200 && xhr.status < 400) {
+      if ( xhr.status === 200 ) {
         try {
           paypalData = JSON.parse(xhr.responseText);
+          amount = Math.round(paypalData.sum);
+          showTotalizer();
+          setTimeout(getTotal, TICKER_INTERVAL);
         } catch(e) {
-          console.log(e);
+          console.error(e);
           hideTotalizer();
-          return;
         }
-        showTotalizer();
-        totalizerUI.textContent = Math.round(paypalData.sum);
       }
     };
     xhr.overrideMimeType("application/json");
