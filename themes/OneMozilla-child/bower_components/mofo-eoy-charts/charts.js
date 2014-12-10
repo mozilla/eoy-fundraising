@@ -299,7 +299,7 @@ var CHARTS = {
       }
     });
 
-    this.fetchData('http://transformtogeckoboard.herokuapp.com/eoy/transactionsbysource', function (data) {
+    this.fetchData('https://transformtogeckoboard.herokuapp.com/eoy/transactionsbysource', function (data) {
       data = this.modelData(data, {
         category: 'source',
         donor: 'eoyDonations'
