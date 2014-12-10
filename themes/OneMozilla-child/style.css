@@ -98,6 +98,9 @@ section h3,
 /* =========================  */
 /* EOY 2014 Charts */
 /* =========================  */
+#eoy-2014-charts p {
+  font-family: "Open Sans", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Calibri, sans-serif;
+}
 #eoy-2014-charts .chart {
   padding: 0;
 }
@@ -116,11 +119,9 @@ section h3,
 #left-column {
   width: 40%;
   margin-right: 30px;
-  display: none;
 }
 #right-column {
-  /*width: calc( 60% - @gutter );*/
-  width: 100%;
+  width: calc(60% - 30px);
 }
 section:not(:last-child) {
   padding-bottom: 30px;

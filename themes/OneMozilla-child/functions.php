@@ -104,12 +104,12 @@ function eoy_2014_theme_scripts_and_stylesheets() {
   // wp_enqueue_script( 'totalizer-static-script', get_stylesheet_directory_uri() . '/js/totalizer-static.js', array('odometer-script'), '', true );
 
   // visualizations
-  // wp_enqueue_style( 'eoy-2014-charts-style', get_stylesheet_directory_uri() . '/bower_components/mofo-eoy-charts/charts.css' );
-  // wp_enqueue_script( 'jquery-script', get_stylesheet_directory_uri() . '/js/jquery-2.1.1.min.js', array(), '', true );
-  // wp_enqueue_script( 'd3-script', get_stylesheet_directory_uri() . '/bower_components/d3/d3.min.js', array('jquery-script'), '', true );
-  // wp_enqueue_script( 'eoy-2014-charts-script', get_stylesheet_directory_uri() . '/bower_components/mofo-eoy-charts/charts.js', array('d3-script'), '', true );
+  wp_enqueue_style( 'eoy-2014-charts-style', get_stylesheet_directory_uri() . '/bower_components/mofo-eoy-charts/charts.css' );
+  wp_enqueue_script( 'jquery-script', get_stylesheet_directory_uri() . '/js/jquery-2.1.1.min.js', array(), '', true );
+  wp_enqueue_script( 'd3-script', get_stylesheet_directory_uri() . '/bower_components/d3/d3.min.js', array('jquery-script'), '', true );
+  wp_enqueue_script( 'eoy-2014-charts-script', get_stylesheet_directory_uri() . '/bower_components/mofo-eoy-charts/charts.js', array('d3-script'), '', true );
 
-  // wp_enqueue_script( 'ui-script', get_stylesheet_directory_uri() . '/js/ui.js', array('eoy-2014-charts-script'), '', true );
+  wp_enqueue_script( 'ui-script', get_stylesheet_directory_uri() . '/js/ui.js', array('eoy-2014-charts-script'), '', true );
 }
 add_action('wp_enqueue_scripts', 'eoy_2014_theme_scripts_and_stylesheets');
 
