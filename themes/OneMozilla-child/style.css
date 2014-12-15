@@ -182,6 +182,9 @@ section:not(:last-child) {
   font-style: italic;
   color: #bbb;
 }
+.blog-excerpt {
+  line-height: 1.3;
+}
 .blog-excerpt p {
   margin: 0 0 10px 0;
 }
