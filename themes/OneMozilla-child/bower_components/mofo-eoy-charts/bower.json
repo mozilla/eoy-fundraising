@@ -1,6 +1,6 @@
 {
   "name": "mofo-eoy-charts",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "main": "charts.js",
   "homepage": "https://github.com/mozilla/eoy-charts",
   "authors": [

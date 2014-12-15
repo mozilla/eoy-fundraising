@@ -490,7 +490,7 @@ var CHARTS = {
       elToggle = document.createElement('button'),
       nativeDisplay = target.style.display;
 
-    elToggle.innerHTML = '+';
+    elToggle.innerHTML = 'Show \"Other\"';
     elToggle.classList.add('btn-toggle');
 
     target.parentNode.insertBefore(elToggle , target);
@@ -499,10 +499,10 @@ var CHARTS = {
     elToggle.addEventListener('click', function () {
       if (isVisible) {
         target.style.display = 'none';
-        elToggle.innerHTML = '+';
+        elToggle.innerHTML = 'Show \"Other\"';
       } else {
         target.style.display = nativeDisplay;
-        elToggle.innerHTML = '-';
+        elToggle.innerHTML = 'Hide \"Other\"';
       }
 
       isVisible = !isVisible;
