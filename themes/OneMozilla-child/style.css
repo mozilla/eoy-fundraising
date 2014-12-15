@@ -192,6 +192,14 @@ section:not(:last-child) {
   float: right;
 }
 /* =========================  */
+/* Infrastructure Status page */
+/* =========================  */
+#infra-status {
+  text-align: center;
+  padding-top: 180px;
+  padding-bottom: 100px;
+}
+/* =========================  */
 /* Other */
 /* =========================  */
 .donate {
