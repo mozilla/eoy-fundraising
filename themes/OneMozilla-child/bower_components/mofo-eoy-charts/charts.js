@@ -5,7 +5,7 @@ var CHARTS = {
   config: {
     topDonorGroupSize: 8
   },
-  colors: ['#2F5899', '#A5509C', '#19B7E4', '#FAAC3F' , '#61C3B0', '#FCDD3F', '#F48032', '#7C3B79', '#EB5543', '#89C764', '#1D6FB7', '#F06DA6'],
+  colors: ['#2F5899', '#A5509C', '#19B7E4', '#F7AEDD' , '#02B333', '#FCDD3F', '#F48032', '#61C3B0', '#EC3535', '#89C764', '#1D6FB7', '#F06DA6'],
   isoCountries: {
     'AF' : 'Afghanistan',
     'AX' : 'Aland Islands',
@@ -391,7 +391,7 @@ var CHARTS = {
     // Construct bottom donors section
     chartHTML += '<div data-component="toggle">';
 
-    data.slice(self.config.topDonorGroupSize).forEach(function (item, index, array) {
+    data.slice(self.config.topDonorGroupSize - 1).forEach(function (item, index, array) {
       chartHTML += buildKeyItem(item, index);
     });
 
@@ -405,8 +405,27 @@ var CHARTS = {
       elTarget = document.querySelector(target),
       self = this;
 
+    var bottomDonors = data.slice(self.config.topDonorGroupSize - 1);
+
+    var bottomDonorAggregate = {
+      donationSource: 'Other',
+      eoyDonations: 0
+    };
+
+    bottomDonors.forEach(function (donor, index) {
+      bottomDonorAggregate.eoyDonations += donor.eoyDonations;
+    });
+
+    var topDonors = data.slice(0, self.config.topDonorGroupSize -1 );
+
+    topDonors.push(bottomDonorAggregate);
+
+    topDonors.sort(function (a, b) {
+      return a.eoyDonations < b.eoyDonations;
+    });
+
     var chart = d3.select(target + ' svg')
-      .data([data.slice(0, self.config.topDonorGroupSize)])
+      .data([topDonors])
       .attr('viewbox', viewbox)
       .append('svg:g')
       .attr('transform', 'translate(' + radius + ',' + radius + ')');
@@ -449,7 +468,7 @@ var CHARTS = {
     // Construct top donors section
     var keyHTML = '<div class="pie-chart-key"><div class="group">';
 
-    data.slice(0, self.config.topDonorGroupSize).forEach(function (item, index, array) {
+    topDonors.forEach(function (item, index, array) {
       keyHTML += buildKeyItem(item, index, true);
     });
 
@@ -458,7 +477,7 @@ var CHARTS = {
     // Construct bottom donors section
     keyHTML += '<div class="group" data-component="toggle">';
 
-    data.slice(self.config.topDonorGroupSize).forEach(function (item, index, array) {
+    data.slice(self.config.topDonorGroupSize - 1).forEach(function (item, index, array) {
       keyHTML += buildKeyItem(item, index, false);
     });
 
