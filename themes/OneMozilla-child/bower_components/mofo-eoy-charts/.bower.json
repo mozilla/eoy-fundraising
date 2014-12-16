@@ -1,6 +1,6 @@
 {
   "name": "mofo-eoy-charts",
-  "version": "1.2.2",
+  "version": "1.2.4",
   "main": "charts.js",
   "homepage": "https://github.com/mozilla/eoy-charts",
   "authors": [
@@ -20,11 +20,11 @@
   "dependencies": {
     "d3": "3.4.13"
   },
-  "_release": "1.2.2",
+  "_release": "1.2.4",
   "_resolution": {
     "type": "version",
-    "tag": "v1.2.2",
-    "commit": "bedacf8a57dc46303062b6da9ed984b3d45738bb"
+    "tag": "v1.2.4",
+    "commit": "f794390c3dafce1287238dbbbd8b4c7aba30dd60"
   },
   "_source": "https://github.com/mozilla/eoy-charts.git",
   "_target": "*",
