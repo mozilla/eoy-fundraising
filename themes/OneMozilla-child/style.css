@@ -108,6 +108,7 @@ section h3,
 }
 .new-goal b {
   font-size: 30px;
+  line-height: 14px;
 }
 .new-goal:before {
   content: "";
