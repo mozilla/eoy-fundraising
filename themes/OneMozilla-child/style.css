@@ -54,7 +54,7 @@ section h3,
   background-image: url(img/MozillaCrowd_EOYVersion.png), linear-gradient(to bottom, #fee885, #fcde3f);
   background-repeat: no-repeat;
   background-position: bottom;
-  padding: 70px 0 120px 0;
+  padding: 70px 0 140px 0;
 }
 #eoy-home-banner h1 {
   font-size: 63px;
@@ -77,6 +77,8 @@ section h3,
 }
 #totalizer {
   display: inline-block;
+  position: relative;
+  bottom: 2px;
   background: #fff;
   border-radius: 5px;
   font-size: 40px;
@@ -95,7 +97,7 @@ section h3,
   position: relative;
   top: 3px;
   letter-spacing: 0;
-  font-size: 15px;
+  font-size: 16px;
 }
 .new-goal {
   position: relative;
@@ -279,6 +281,9 @@ section:not(:last-child) {
   #right-column,
   .half-column {
     margin-top: 30px;
+  }
+  #eoy-home-banner {
+    padding-bottom: 120px;
   }
   #totalizer-container p {
     display: block;
