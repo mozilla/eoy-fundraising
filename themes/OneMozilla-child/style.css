@@ -292,6 +292,9 @@ section:not(:last-child) {
   #totalizer-container p {
     display: block;
   }
+  .new-goal {
+    font-size: 12px;
+  }
 }
 @media (max-width: 479px) {
   #eoy-home-banner h1 {
