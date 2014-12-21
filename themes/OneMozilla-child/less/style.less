@@ -9,6 +9,8 @@
 @import url("../OneMozilla/style.css");
 @import url("buttons.css");
 
+@import url("css/font-blokletters.css");
+
 @container-padding: 20px;
 @gutter: 30px;
 
@@ -60,7 +62,6 @@ section h3,
   margin-bottom: 20px;
 }
 
-
 /* =========================  */
 /* Header */
 /* =========================  */
@@ -99,6 +100,7 @@ section h3,
 #totalizer-container {
   margin: 20px 0;
   p {
+    display: inline-block;
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 0;
@@ -127,6 +129,27 @@ section h3,
     letter-spacing: 0;
     font-size: 15px;
   }
+}
+
+.new-goal {
+  position: relative;
+  color: @mozilla-red;
+  font-family: "Blokletters Balpen", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  b {
+    font-size: 30px;
+  }
+}
+.new-goal:before {
+  content: "";
+  position: absolute;
+  left: -45%;
+  top: 50%;
+  right: 100%;
+  border-top: 2px solid;
+  border-color: inherit;
+  transform:rotate(20deg);
 }
 
 
@@ -337,6 +360,12 @@ section:not(:last-child) {
   #right-column,
   .half-column {
     margin-top: 30px;
+  }
+
+  #totalizer-container {
+    p {
+      display: block;
+    }
   }
 }
 

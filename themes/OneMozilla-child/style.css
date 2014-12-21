@@ -1,5 +1,6 @@
 @import url("../OneMozilla/style.css");
 @import url("buttons.css");
+@import url("css/font-blokletters.css");
 /*
  Theme Name:     One Mozilla Child
  Theme URI:      https://github.com/mozilla/eoy-fundraising
@@ -68,6 +69,7 @@ section h3,
   margin: 20px 0;
 }
 #totalizer-container p {
+  display: inline-block;
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 0;
@@ -94,6 +96,26 @@ section h3,
   top: 3px;
   letter-spacing: 0;
   font-size: 15px;
+}
+.new-goal {
+  position: relative;
+  color: #c13832;
+  font-family: "Blokletters Balpen", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+.new-goal b {
+  font-size: 30px;
+}
+.new-goal:before {
+  content: "";
+  position: absolute;
+  left: -45%;
+  top: 50%;
+  right: 100%;
+  border-top: 2px solid;
+  border-color: inherit;
+  transform: rotate(20deg);
 }
 /* =========================  */
 /* EOY 2014 Charts */
@@ -257,6 +279,9 @@ section:not(:last-child) {
   #right-column,
   .half-column {
     margin-top: 30px;
+  }
+  #totalizer-container p {
+    display: block;
   }
 }
 @media (max-width: 479px) {
