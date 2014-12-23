@@ -99,18 +99,18 @@ section h3,
   letter-spacing: 0;
   font-size: 16px;
 }
-.new-goal {
+#new-goal {
   position: relative;
   color: #c13832;
   font-family: "Blokletters Balpen", sans-serif;
   font-size: 14px;
   font-weight: bold;
 }
-.new-goal b {
+#new-goal b {
   font-size: 30px;
   line-height: 14px;
 }
-.new-goal:before {
+#new-goal:before {
   content: "";
   position: absolute;
   left: -50%;
@@ -293,7 +293,7 @@ section:not(:last-child) {
   #totalizer-container p {
     display: block;
   }
-  .new-goal {
+  #new-goal {
     font-size: 12px;
   }
 }
