@@ -99,31 +99,6 @@ section h3,
   letter-spacing: 0;
   font-size: 16px;
 }
-#new-goal {
-  position: relative;
-  color: #c13832;
-  font-family: "Blokletters Balpen", sans-serif;
-  font-size: 14px;
-  font-weight: bold;
-}
-#new-goal b {
-  font-size: 30px;
-  line-height: 14px;
-}
-#new-goal:before {
-  content: "";
-  position: absolute;
-  left: -50%;
-  top: 40%;
-  right: 100%;
-  border-top: 2px solid;
-  border-color: inherit;
-  -webkit-transform: rotate(15deg);
-  -moz-transform: rotate(15deg);
-  -ms-transform: rotate(15deg);
-  -o-transform: rotate(15deg);
-  transform: rotate(15deg);
-}
 /* =========================  */
 /* EOY 2014 Charts */
 /* =========================  */
