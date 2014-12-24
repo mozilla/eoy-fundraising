@@ -99,6 +99,10 @@ section h3,
   letter-spacing: 0;
   font-size: 16px;
 }
+#totalizer-copy {
+  margin: auto;
+  width: 100%;
+}
 /* =========================  */
 /* EOY 2014 Charts */
 /* =========================  */
