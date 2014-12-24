@@ -86,9 +86,6 @@ section h3,
   letter-spacing: 3px;
   padding: 0 10px;
 }
-#totalizer-copy {
-  margin: auto; width: 100%;
-}
 #totalizer .dollar-sign {
   position: relative;
   top: 3px;
@@ -101,6 +98,10 @@ section h3,
   top: 3px;
   letter-spacing: 0;
   font-size: 16px;
+}
+#totalizer-copy {
+  margin: auto;
+  width: 100%;
 }
 /* =========================  */
 /* EOY 2014 Charts */
