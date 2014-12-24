@@ -76,7 +76,6 @@ section h3,
   color: #939597;
 }
 #totalizer {
-  display: inline-block;
   position: relative;
   bottom: 2px;
   background: #fff;
@@ -85,6 +84,9 @@ section h3,
   color: #939597;
   letter-spacing: 3px;
   padding: 0 10px;
+}
+#totalizer-copy {
+  margin: auto; width: 100%;
 }
 #totalizer .dollar-sign {
   position: relative;
