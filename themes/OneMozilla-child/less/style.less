@@ -18,7 +18,6 @@
 @mozilla-red: #C13832;
 @yellow-bg: #FEE885;
 @yellow-bg-light: #FCDE3F;
-@totalizer-grey: #939597;
 
 @border-radius: 5px;
 
@@ -74,7 +73,7 @@ section h3,
 }
 
 /* =========================  */
-/* Totalizer */
+/* Totalizer / Home Banner */
 /* =========================  */
 
 #eoy-home-banner {
@@ -93,47 +92,9 @@ section h3,
     width: 80%;
     margin: 0 auto;
   }
-}
-
-#totalizer-container {
-  margin: 20px 0;
-  p {
-    display: inline-block;
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 0;
-    color: @totalizer-grey;
+  .button.button-red {
+    margin: 20px 0;
   }
-}
-
-#totalizer {
-  display: inline-block;
-  position: relative;
-  bottom: 2px;
-  background: #fff;
-  border-radius: @border-radius;
-  font-size: 40px;
-  color: @totalizer-grey;
-  letter-spacing: 3px;
-  padding: 0 10px;
-  .dollar-sign {
-    position: relative;
-    top: 3px;
-  }
-  #amount {
-    display: inline-block;
-  }
-  small {
-    position: relative;
-    top: 3px;
-    letter-spacing: 0;
-    font-size: 16px;
-  }
-}
-
-#totalizer-copy {
-  margin: auto;
-  width: 100%;
 }
 
 /* =========================  */
@@ -348,12 +309,6 @@ section:not(:last-child) {
   #eoy-home-banner {
     padding-bottom: 120px;
   }
-
-  #totalizer-container {
-    p {
-      display: block;
-    }
-  }
 }
 
 @media (max-width: 479px) {
@@ -363,20 +318,6 @@ section:not(:last-child) {
 
   #eoy-home-banner h2 {
     font-size: 16px;
-  }
-
-  #totalizer-container {
-    p {
-      font-size: 14px;
-    }
-  }
-
-  #totalizer {
-    font-size: 30px;
-    letter-spacing: 1px;
-    small {
-      font-size: 12px;
-    }
   }
 
   #get-moz-updates .button {
