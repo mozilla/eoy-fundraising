@@ -47,14 +47,15 @@ section h3,
   min-height: 0;
 }
 /* =========================  */
-/* Totalizer */
+/* Totalizer / Home Banner */
 /* =========================  */
 #eoy-home-banner {
   background: #fee885;
   background-image: url(img/MozillaCrowd_EOYVersion.png), linear-gradient(to bottom, #fee885, #fcde3f);
+  background-size: 1000px auto, 100% 100%;
   background-repeat: no-repeat;
   background-position: bottom;
-  padding: 70px 0 140px 0;
+  padding: 45px 0 80px 0;
 }
 #eoy-home-banner h1 {
   font-size: 63px;
@@ -65,43 +66,8 @@ section h3,
   width: 80%;
   margin: 0 auto;
 }
-#totalizer-container {
+#eoy-home-banner .button.button-red {
   margin: 20px 0;
-}
-#totalizer-container p {
-  display: inline-block;
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 0;
-  color: #939597;
-}
-#totalizer {
-  display: inline-block;
-  position: relative;
-  bottom: 2px;
-  background: #fff;
-  border-radius: 5px;
-  font-size: 40px;
-  color: #939597;
-  letter-spacing: 3px;
-  padding: 0 10px;
-}
-#totalizer .dollar-sign {
-  position: relative;
-  top: 3px;
-}
-#totalizer #amount {
-  display: inline-block;
-}
-#totalizer small {
-  position: relative;
-  top: 3px;
-  letter-spacing: 0;
-  font-size: 16px;
-}
-#totalizer-copy {
-  margin: auto;
-  width: 100%;
 }
 /* =========================  */
 /* EOY 2014 Charts */
@@ -266,12 +232,6 @@ section:not(:last-child) {
   .half-column {
     margin-top: 30px;
   }
-  #eoy-home-banner {
-    padding-bottom: 120px;
-  }
-  #totalizer-container p {
-    display: block;
-  }
 }
 @media (max-width: 479px) {
   #eoy-home-banner h1 {
@@ -279,16 +239,6 @@ section:not(:last-child) {
   }
   #eoy-home-banner h2 {
     font-size: 16px;
-  }
-  #totalizer-container p {
-    font-size: 14px;
-  }
-  #totalizer {
-    font-size: 30px;
-    letter-spacing: 1px;
-  }
-  #totalizer small {
-    font-size: 12px;
   }
   #get-moz-updates .button {
     margin-top: 20px;
