@@ -12,5 +12,4 @@
     <div class="donate">
       <a id="donate-button" href="https://sendto.mozilla.org/page/contribute/EOYFR2013-newdefault?source=viewsource_redbutton" target="_blank" class="button button-red">Donate</a>
     </div>
-    <a href="http://www.mozilla.org/" id="tabzilla">Mozilla</a>
   </header><!-- #masthead -->
