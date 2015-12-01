@@ -36,7 +36,6 @@
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/css/socialshare.css">
   <?php endif; ?>
   <link rel="stylesheet" type="text/css" media="screen,projection" href="<?php bloginfo('stylesheet_url'); ?>">
-  <link rel="stylesheet" type="text/css" media="all" href="//www.mozilla.org/tabzilla/media/css/tabzilla.css">
   <link rel="stylesheet" type="text/css" media="print" href="<?php echo get_template_directory_uri(); ?>/css/print.css">
   <!--[if lte IE 7]><link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/css/ie7.css"><![endif]-->
 
@@ -73,9 +72,6 @@
 
 <body <?php body_class($theme_options[color_scheme]); ?>>
 <div id="page">
-  <div class="wrap">
-    <a href="http://www.mozilla.org/" id="tabzilla">Mozilla</a>
-  </div>
   <?php if ( (is_front_page()) && ($paged < 1) ) : ?>
     <?php get_template_part( 'totalizer' ); ?>
   <?php endif; ?>
