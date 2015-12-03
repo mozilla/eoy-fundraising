@@ -69,7 +69,13 @@ section h3,
   margin: 0 auto;
   color: #FEF8F8;
 }
-#eoy-home-banner .button.button-white {
+#eoy-home-banner .button {
+  box-shadow: none;
+}
+#eoy-home-banner .button:focus {
+  outline: 0;
+}
+#eoy-home-banner .button .button-white {
   margin: 20px 0;
   border-color: white;
   font-size: 20px;
@@ -332,6 +338,7 @@ section:not(:last-child) {
   height: 50px;
   font-size: 25px;
   border-radius: 5px;
+  padding: 0 10px;
 }
 .odometer-parent small {
   font-size: 10px;
@@ -437,4 +444,3 @@ section:not(:last-child) {
 .odometer.odometer-theme-plaza .odometer-digit .odometer-digit-inner {
   left: 0.03em;
 }
-/*# sourceMappingURL=style.css.map */

@@ -95,11 +95,17 @@ section h3,
     margin: 0 auto;
     color: #FEF8F8;
   }
-  .button.button-white {
-    margin: 20px 0;
-    border-color: white;
-    font-size: 20px;
-    border: 1px solid white;
+  .button {
+    box-shadow: none;
+    &:focus {
+      outline: 0;
+    }
+    .button-white {
+      margin: 20px 0;
+      border-color: white;
+      font-size: 20px;
+      border: 1px solid white;
+    }
   }
 }
 
@@ -416,6 +422,7 @@ section:not(:last-child) {
   height: 50px;
   font-size: 25px;
   border-radius: 5px;
+  padding: 0 10px;
   small {
     font-size: 10px;
     font-weight: bold;
