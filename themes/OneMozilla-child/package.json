@@ -8,13 +8,13 @@
     "url": "https://github.com/mozilla/eoy-fundraising"
   },
   "license": "MPL-2.0",
-  "scripts": {},
-  "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-contrib-less": "~0.11.0",
-    "grunt-contrib-watch": "~0.6.1"
-  },
+  "scripts": {
+      "start": "autoless less .. --autoprefix '> 1%, last 2 versions'"
+    },
   "engines": {
-  "node": ">=0.10.0"
+    "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "autoless": "^0.1.7"
   }
 }

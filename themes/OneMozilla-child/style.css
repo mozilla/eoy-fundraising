@@ -47,26 +47,105 @@ section h3,
   min-height: 0;
 }
 /* =========================  */
-/* Totalizer / Home Banner */
+/* Totalizer / Home Banner    */
+/*     v 2015-12-03           */
 /* =========================  */
 #eoy-home-banner {
-  background: #fee885;
-  background-image: url(img/MozillaCrowd_EOYVersion.png), linear-gradient(to bottom, #fee885, #fcde3f);
-  background-size: 1000px auto, 100% 100%;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  padding: 45px 0 80px 0;
+  background: #9b2f2c;
+  padding-bottom: 80px;
+}
+#eoy-home-banner .text-center {
+  position: relative;
+  top: 45px;
 }
 #eoy-home-banner h1 {
-  font-size: 63px;
+  font-size: 55px;
+  color: #FEF8F8;
 }
 #eoy-home-banner h2 {
   font-size: 20px;
   line-height: 1.3;
   width: 80%;
   margin: 0 auto;
+  color: #FEF8F8;
 }
-#eoy-home-banner .button.button-red {
+#eoy-home-banner .button {
+  box-shadow: none;
+}
+#eoy-home-banner .button:focus {
+  outline: 0;
+}
+#eoy-home-banner .button .button-white {
+  margin: 20px 0;
+  border-color: white;
+  font-size: 20px;
+  border: 1px solid white;
+}
+.dapper-fox {
+  visibility: hidden;
+  display: none;
+}
+@media (min-width: 767px) {
+  #eoy-home-banner {
+    background: #f89c26;
+    background-image: url(img/heart.svg);
+    background-size: 1000px auto, 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10px 0 80px 0;
+  }
+  #eoy-home-banner .text-center {
+    position: relative;
+    top: 45px;
+  }
+  #eoy-home-banner .text-center .dapper-fox {
+    height: 150px;
+    visibility: visible;
+    bottom: -35px;
+    right: 0;
+    position: absolute;
+    display: block;
+  }
+  #eoy-home-banner h1 {
+    font-size: 63px;
+  }
+  #eoy-home-banner h2 {
+    font-size: 20px;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+    width: 80%;
+    margin: 0 auto;
+    color: #FEF8F8;
+  }
+  #eoy-home-banner .button.button-white {
+    margin: 20px 0;
+    border-color: white;
+    font-size: 20px;
+    border: 1px solid white;
+  }
+}
+/* =========================  */
+/* Totalizer / Home Banner */
+/* =========================  */
+#eoy-2014-home-banner {
+  background: #fee885;
+  background-image: url(img/MozillaCrowd_EOYVersion.png), -webkit-linear-gradient(top, #fee885, #fcde3f);
+  background-image: url(img/MozillaCrowd_EOYVersion.png), linear-gradient(to bottom, #fee885, #fcde3f);
+  background-size: 1000px auto, 100% 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 45px 0 80px 0;
+}
+#eoy-2014-home-banner h1 {
+  font-size: 63px;
+}
+#eoy-2014-home-banner h2 {
+  font-size: 20px;
+  line-height: 1.3;
+  width: 80%;
+  margin: 0 auto;
+}
+#eoy-2014-home-banner .button.button-red {
   margin: 20px 0;
 }
 /* =========================  */
@@ -95,7 +174,7 @@ section h3,
   margin-right: 30px;
 }
 #right-column {
-  width: calc(60% - 30px);
+  width: calc(30%);
 }
 section:not(:last-child) {
   padding-bottom: 30px;
@@ -104,15 +183,15 @@ section:not(:last-child) {
 }
 .half-column {
   float: left;
-  width: calc(50% - (30px / 2));
+  width: calc(35%);
   background: #fff;
   margin-top: 50px;
 }
 .half-column:first-of-type {
-  margin-right: calc(30px / 2);
+  margin-right: calc(15px);
 }
 .half-column:last-of-type {
-  margin-left: calc(30px / 2);
+  margin-left: calc(15px);
 }
 /* =========================  */
 /* Blog Previews */
@@ -150,7 +229,7 @@ section:not(:last-child) {
   color: #20679e;
   text-overflow: ellipsis;
   overflow: hidden;
-  width: calc(100% - 100px);
+  width: calc(0%);
 }
 .blog-preview .author {
   font-style: italic;
@@ -235,7 +314,7 @@ section:not(:last-child) {
 }
 @media (max-width: 479px) {
   #eoy-home-banner h1 {
-    font-size: 45px;
+    font-size: 40px;
   }
   #eoy-home-banner h2 {
     font-size: 16px;
@@ -243,4 +322,125 @@ section:not(:last-child) {
   #get-moz-updates .button {
     margin-top: 20px;
   }
+}
+.bottom-section-header {
+  padding-top: 40px;
+  color: white;
+  font-style: italic;
+}
+/* =========================  */
+/* odometer */
+/* =========================  */
+.odometer-parent {
+  background: white;
+  margin: 0 auto;
+  width: 240px;
+  height: 50px;
+  font-size: 25px;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+.odometer-parent small {
+  font-size: 10px;
+  font-weight: bold;
+}
+.odometer.odometer-auto-theme,
+.odometer.odometer-theme-plaza {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  position: relative;
+}
+.odometer.odometer-auto-theme .odometer-digit,
+.odometer.odometer-theme-plaza .odometer-digit {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  position: relative;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer,
+.odometer.odometer-theme-plaza .odometer-digit .odometer-digit-spacer {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  visibility: hidden;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner,
+.odometer.odometer-theme-plaza .odometer-digit .odometer-digit-inner {
+  text-align: left;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon,
+.odometer.odometer-theme-plaza .odometer-digit .odometer-ribbon {
+  display: block;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon-inner,
+.odometer.odometer-theme-plaza .odometer-digit .odometer-ribbon-inner {
+  display: block;
+  -webkit-backface-visibility: hidden;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-value,
+.odometer.odometer-theme-plaza .odometer-digit .odometer-value {
+  display: block;
+  -webkit-transform: translateZ(0);
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value,
+.odometer.odometer-theme-plaza .odometer-digit .odometer-value.odometer-last-value {
+  position: absolute;
+}
+.odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner,
+.odometer.odometer-theme-plaza.odometer-animating-up .odometer-ribbon-inner {
+  -webkit-transition: -webkit-transform 2s;
+  transition: transform 2s;
+}
+.odometer.odometer-auto-theme.odometer-animating-up.odometer-animating .odometer-ribbon-inner,
+.odometer.odometer-theme-plaza.odometer-animating-up.odometer-animating .odometer-ribbon-inner {
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+.odometer.odometer-auto-theme.odometer-animating-down .odometer-ribbon-inner,
+.odometer.odometer-theme-plaza.odometer-animating-down .odometer-ribbon-inner {
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+.odometer.odometer-auto-theme.odometer-animating-down.odometer-animating .odometer-ribbon-inner,
+.odometer.odometer-theme-plaza.odometer-animating-down.odometer-animating .odometer-ribbon-inner {
+  -webkit-transition: -webkit-transform 2s;
+  transition: transform 2s;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+.odometer.odometer-auto-theme,
+.odometer.odometer-theme-plaza {
+  border-radius: 0.15em;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 100;
+  padding: 0 0.12em;
+  line-height: 1.2em;
+  font-size: 1.2em;
+  background-size: 16px 16px;
+}
+.odometer.odometer-auto-theme .odometer-digit,
+.odometer.odometer-theme-plaza .odometer-digit {
+  border-radius: 0.1em;
+  padding: 0 0.03em;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner,
+.odometer.odometer-theme-plaza .odometer-digit .odometer-digit-inner {
+  left: 0.03em;
 }
