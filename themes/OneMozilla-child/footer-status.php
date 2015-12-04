@@ -29,7 +29,6 @@
   </div>
 </footer>
 
-<script src="//www.mozilla.org/tabzilla/media/js/tabzilla.js"></script>
 <script>
   window.location.replace("http://opsview.mofoprod.net:3000/viewport/EOY");
 </script>
