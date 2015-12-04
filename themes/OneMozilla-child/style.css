@@ -340,6 +340,9 @@ section:not(:last-child) {
   border-radius: 5px;
   padding: 0 10px;
 }
+.odometer-parent .dollar-sign {
+  vertical-align: middle;
+}
 .odometer-parent small {
   font-size: 10px;
   font-weight: bold;
