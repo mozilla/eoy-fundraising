@@ -6,8 +6,10 @@
       Together, we are building an Internet that puts the public good before profit.
     </h2>
       <div class="bottom-section-header">End Of Year Campaign</div>
-    <div class="odometer-parent">
-      <span class="dollar-sign">$</span><div id="amount" class="odometer"></div><small>USD</small>
+    <div>
+      <div class="odometer-parent">
+        <span class="dollar-sign">$</span><div id="amount" class="odometer"></div><small>USD</small>
+      </div>
     </div>
     <a href="https://donate.mozilla.org/en-US/?amount=50&presets=100%2C50%2C25%2C15&source=FMO&ref=EOYFR2015&utm_campaign=EOYFR2015&utm_source=FMO&utm_medium=referral&utm_content=FMO_redbutton" target="_blank" class="button button-white">Donate now</a>
   </div>

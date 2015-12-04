@@ -176,7 +176,7 @@ section h3,
   margin-right: 30px;
 }
 #right-column {
-  width: calc(30%);
+  width: calc(55%);
 }
 section:not(:last-child) {
   padding-bottom: 30px;
@@ -300,9 +300,6 @@ section:not(:last-child) {
 /* =========================  */
 /* Responsive */
 /* =========================  */
-#right-column {
-  width: calc(55%);
-}
 @media (max-width: 767px) {
   #left-column,
   #right-column,
@@ -338,8 +335,7 @@ section:not(:last-child) {
 /* =========================  */
 .odometer-parent {
   background: white;
-  margin: 0 auto;
-  width: 240px;
+  display: inline-block;
   font-size: 25px;
   border-radius: 5px;
   padding: 0 10px;
