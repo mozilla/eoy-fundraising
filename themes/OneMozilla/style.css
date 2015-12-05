@@ -109,7 +109,6 @@ img, video, object, embed { max-width: 100%; height: auto; }
 
 /* @General styles ***/
 html {
-  border-top: 2px solid #fff;
   background: #fff;
 }
 body {
@@ -359,7 +358,7 @@ a:active {
   border-top: 1px dotted rgba(0,0,0,0.2);
   padding-left: 20px;
 }
-.widget_nav_menu a, 
+.widget_nav_menu a,
 .widget_categories a {
   display: inline-block;
   padding: 8px 0;
@@ -1259,10 +1258,10 @@ input:-moz-placeholder {
   font-size: .857em;
   width: 96%;
 }
-#comment-form #cmt-ackbar { 
-  position: absolute; 
+#comment-form #cmt-ackbar {
+  position: absolute;
   left: -999em;
-  height: 0; 
+  height: 0;
 }
 
 /* @Footer *********/
@@ -1495,7 +1494,7 @@ input:-moz-placeholder {
   .entry-header .avatar {
     display: none;
   }
-  
+
   .entry-content .wp-post-image,
   .entry-summary .wp-post-image {
     width: 60px;

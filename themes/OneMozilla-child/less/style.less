@@ -87,6 +87,7 @@ section h3,
   h1 {
     font-size: 55px;
     color: #FEF8F8;
+    text-shadow: none;
   }
   h2 {
     font-size: 20px;
@@ -94,6 +95,7 @@ section h3,
     width: 80%;
     margin: 0 auto;
     color: #FEF8F8;
+    text-shadow: none;
   }
   .button {
     box-shadow: none;
@@ -114,7 +116,6 @@ section h3,
   display: none;
 }
 @media (min-width: 767px) {
-
   #eoy-home-banner {
     background: #f89c26;
     background-image: url(img/heart.svg);
@@ -216,7 +217,7 @@ section h3,
 }
 
 #right-column {
-  width: calc( 60% - @gutter );
+  width: calc(55%);
 }
 
 section:not(:last-child) {
@@ -417,9 +418,7 @@ section:not(:last-child) {
 
 .odometer-parent {
   background: white;
-  margin: 0 auto;
-  width: 240px;
-  height: 50px;
+  display: inline-block;
   font-size: 25px;
   border-radius: 5px;
   padding: 0 10px;
