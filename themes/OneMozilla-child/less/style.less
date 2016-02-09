@@ -78,82 +78,134 @@ section h3,
 /* =========================  */
 
 #eoy-home-banner {
-  background: #9b2f2c;
-  padding-bottom: 80px;
+  background: #E63E2F;
+  background-size: 1020px auto, 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
   .text-center {
     position: relative;
-    top: 45px;
+    height: 180px;
+    width: 100%;
+    padding: 20px 0;
+    @media (max-width: 1024px) {
+      height: 145px;
+    }
+    @media (max-width: 768px) {
+      padding: 40px 0;
+
+    }
+    @media (max-width: 375px) {
+      height: 230px;
+    }
+    .dapper-fox {
+      height: 130px;
+      visibility: visible;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      display: block;
+      @media (max-width: 1024px) {
+        height: 115px;
+      }
+      @media (max-width: 800px) {
+        height: 115px;
+      }
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    .right-heart {
+      right: 0;
+      bottom: 0;
+      height: 220px;
+      position: absolute;
+      display: block;
+      visibility: visible;
+      @media (max-width: 1024px) {
+        height: 185px;
+      }
+      @media (max-width: 800px) {
+        height: 185px;
+      }
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    .left-heart {
+      left: 0;
+      bottom: 0;
+      height: 220px;
+      position: absolute;
+      display: block;
+      visibility: visible;
+      @media (max-width: 1024px) {
+        height: 185px;
+      }
+      @media (max-width: 800px) {
+        height: 170px;
+      }
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    .button-white {
+      box-shadow: none;
+      margin: 20px 0;
+      font-size: 20px;
+      border-color: #FFF;
+      border: 1px solid white;
+      border-radius: .25em;
+      outline: 0;
+      color: #FFF;
+      display: inline-block;
+      position: relative;
+      text-align: center;
+      padding: 10px 45px;
+      line-height: 1.1;
+      text-decoration: none;
+      min-width: 80px;
+      text-shadow: 0 1px 0 rgba(0,0,0,0.25);
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
   h1 {
     font-size: 55px;
     color: #FEF8F8;
     text-shadow: none;
+    @media (max-width: 1024px) {
+      font-size: 45px;
+    }
+    @media (max-width: 800px) {
+      font-size: 45px;
+    }
+    @media (max-width: 768px) {
+      font-size: 30px;
+    }
   }
   h2 {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.3;
+    letter-spacing: 0.5px;
     width: 80%;
     margin: 0 auto;
     color: #FEF8F8;
     text-shadow: none;
-  }
-  .button {
-    box-shadow: none;
-    &:focus {
-      outline: 0;
+    @media (max-width: 1024px) {
+      font-size: 12px;
     }
-    .button-white {
-      margin: 20px 0;
-      border-color: white;
-      font-size: 20px;
-      border: 1px solid white;
+    @media (max-width: 800px) {
+      font-size: 12px;
+    }
+    @media (max-width: 768px) {
+      font-size: 10px;
     }
   }
+
 }
 
-.dapper-fox {
-  visibility: hidden;
-  display: none;
-}
-@media (min-width: 767px) {
-  #eoy-home-banner {
-    background: #f89c26;
-    background-image: url(img/heart.svg);
-    background-size: 1000px auto, 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 10px 0 80px 0;
-    .text-center {
-      position: relative;
-      top: 45px;
-      .dapper-fox {
-        height: 150px;
-        visibility: visible;
-        bottom: -35px;
-        right: 0;
-        position: absolute;
-        display: block;
-      }
-    }
-    h1 {
-      font-size: 63px;
-    }
-    h2 {
-      font-size: 20px;
-      line-height: 1.3;
-      letter-spacing: 0.5px;
-      width: 80%;
-      margin: 0 auto;
-      color: #FEF8F8;
-    }
-    .button.button-white {
-      margin: 20px 0;
-      border-color: white;
-      font-size: 20px;
-      border: 1px solid white;
-    }
-  }
-}
 
 
 /* =========================  */

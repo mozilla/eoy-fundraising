@@ -51,79 +51,165 @@ section h3,
 /*     v 2015-12-03           */
 /* =========================  */
 #eoy-home-banner {
-  background: #9b2f2c;
-  padding-bottom: 80px;
+  background: #E63E2F;
+  background-size: 1020px auto, 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
 }
 #eoy-home-banner .text-center {
   position: relative;
-  top: 45px;
+  height: 180px;
+  width: 100%;
+  padding: 20px 0;
+}
+@media (max-width: 1024px) {
+  #eoy-home-banner .text-center {
+    height: 145px;
+  }
+}
+@media (max-width: 768px) {
+  #eoy-home-banner .text-center {
+    padding: 40px 0;
+  }
+}
+@media (max-width: 375px) {
+  #eoy-home-banner .text-center {
+    height: 230px;
+  }
+}
+#eoy-home-banner .text-center .dapper-fox {
+  height: 130px;
+  visibility: visible;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  display: block;
+}
+@media (max-width: 1024px) {
+  #eoy-home-banner .text-center .dapper-fox {
+    height: 115px;
+  }
+}
+@media (max-width: 800px) {
+  #eoy-home-banner .text-center .dapper-fox {
+    height: 115px;
+  }
+}
+@media (max-width: 768px) {
+  #eoy-home-banner .text-center .dapper-fox {
+    display: none;
+  }
+}
+#eoy-home-banner .text-center .right-heart {
+  right: 0;
+  bottom: 0;
+  height: 220px;
+  position: absolute;
+  display: block;
+  visibility: visible;
+}
+@media (max-width: 1024px) {
+  #eoy-home-banner .text-center .right-heart {
+    height: 185px;
+  }
+}
+@media (max-width: 800px) {
+  #eoy-home-banner .text-center .right-heart {
+    height: 185px;
+  }
+}
+@media (max-width: 768px) {
+  #eoy-home-banner .text-center .right-heart {
+    display: none;
+  }
+}
+#eoy-home-banner .text-center .left-heart {
+  left: 0;
+  bottom: 0;
+  height: 220px;
+  position: absolute;
+  display: block;
+  visibility: visible;
+}
+@media (max-width: 1024px) {
+  #eoy-home-banner .text-center .left-heart {
+    height: 185px;
+  }
+}
+@media (max-width: 800px) {
+  #eoy-home-banner .text-center .left-heart {
+    height: 170px;
+  }
+}
+@media (max-width: 768px) {
+  #eoy-home-banner .text-center .left-heart {
+    display: none;
+  }
+}
+#eoy-home-banner .text-center .button-white {
+  box-shadow: none;
+  margin: 20px 0;
+  font-size: 20px;
+  border-color: #FFF;
+  border: 1px solid white;
+  border-radius: .25em;
+  outline: 0;
+  color: #FFF;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  padding: 10px 45px;
+  line-height: 1.1;
+  text-decoration: none;
+  min-width: 80px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+#eoy-home-banner .text-center .button-white:hover {
+  cursor: pointer;
 }
 #eoy-home-banner h1 {
   font-size: 55px;
   color: #FEF8F8;
   text-shadow: none;
 }
+@media (max-width: 1024px) {
+  #eoy-home-banner h1 {
+    font-size: 45px;
+  }
+}
+@media (max-width: 800px) {
+  #eoy-home-banner h1 {
+    font-size: 45px;
+  }
+}
+@media (max-width: 768px) {
+  #eoy-home-banner h1 {
+    font-size: 30px;
+  }
+}
 #eoy-home-banner h2 {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.3;
+  letter-spacing: 0.5px;
   width: 80%;
   margin: 0 auto;
   color: #FEF8F8;
   text-shadow: none;
 }
-#eoy-home-banner .button {
-  box-shadow: none;
-}
-#eoy-home-banner .button:focus {
-  outline: 0;
-}
-#eoy-home-banner .button .button-white {
-  margin: 20px 0;
-  border-color: white;
-  font-size: 20px;
-  border: 1px solid white;
-}
-.dapper-fox {
-  visibility: hidden;
-  display: none;
-}
-@media (min-width: 767px) {
-  #eoy-home-banner {
-    background: #f89c26;
-    background-image: url(img/heart.svg);
-    background-size: 1000px auto, 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 10px 0 80px 0;
-  }
-  #eoy-home-banner .text-center {
-    position: relative;
-    top: 45px;
-  }
-  #eoy-home-banner .text-center .dapper-fox {
-    height: 150px;
-    visibility: visible;
-    bottom: -35px;
-    right: 0;
-    position: absolute;
-    display: block;
-  }
-  #eoy-home-banner h1 {
-    font-size: 63px;
-  }
+@media (max-width: 1024px) {
   #eoy-home-banner h2 {
-    font-size: 20px;
-    line-height: 1.3;
-    letter-spacing: 0.5px;
-    width: 80%;
-    margin: 0 auto;
-    color: #FEF8F8;
+    font-size: 12px;
   }
-  #eoy-home-banner .button.button-white {
-    margin: 20px 0;
-    border-color: white;
-    font-size: 20px;
-    border: 1px solid white;
+}
+@media (max-width: 800px) {
+  #eoy-home-banner h2 {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  #eoy-home-banner h2 {
+    font-size: 10px;
   }
 }
 /* =========================  */
