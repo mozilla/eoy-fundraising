@@ -23,13 +23,6 @@
   </div>
   <!-- Right column ends =======================  -->
 
-  <div id="get-moz-updates">
-    <p>Get important updates about Mozilla’s work</p>
-    <!-- <div class="btn-container"> -->
-      <a href="//sendto.mozilla.org/page/s/sign-up-for-mozilla/" target="_blank" id="eoy-banner-donate-btn" class="button button-red">Sign up</a>
-    <!-- </div> -->
-  </div>
-
   <div>
     <div id="relevant-links" class="half-column">
       <h3>Explore</h3>
@@ -37,7 +30,7 @@
       <ul>
         <li><a href="//intangibleblog.files.wordpress.com/2014/03/mozilla-fundraising-infographic-web.png ">2013 End of Year Campaign Infographic</a></li>
         <li><a href="//wiki.mozilla.org/Donate">Donation FAQ</a></li>
-        <li><a href="//sendto.mozilla.org/page/contribute/givenow-seq?preset=2&source=FMO&ref=EOYFR2014&utm_campaign=EOYFR2014&utm_source=FMO&utm_medium=referral&utm_content=FMO_donateTXT">Donate Now</a></li>
+        <li><a href="//donate.mozilla.org/?amount=50&presets=100%2C50%2C25%2C15&source=FMO&ref=EOYFR2015&utm_campaign=EOYFR2015&utm_source=FMO&utm_medium=referral&utm_content=FMO_donateTXT">Donate Now</a></li>
       </ul>
     </div>
 
