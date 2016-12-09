@@ -280,14 +280,9 @@ var CHARTS = {
       '<section id="chart-country-data" class="chart">' +
         '<header>' + localizedStrings.donorsByCountry + '</header>' +
         '<svg class="chart-graphic"></svg>' +
-      '</section>' +
-
-      '<section id="chart-source-data" class="chart">' +
-        '<header>' + localizedStrings.donorsBySource + '</header>' +
-        '<div class="bar-chart"></div>' +
       '</section>';
 
-    this.fetchData('https://d3gxuc3bq48qfa.cloudfront.net/eoy-2014-bycountry', function (data) {
+    this.fetchData('https://transaction-storage.mofoprod.net/eoy-2016-bycountry', function (data) {
       data = this.modelData(data, {
         category: 'country_code',
         donor: 'count'
@@ -296,18 +291,6 @@ var CHARTS = {
 
       if (data.length > self.config.topDonorGroupSize) {
         this.renderShowHide(document.querySelector('#chart-country-data [data-component="toggle"]'));
-      }
-    });
-
-    this.fetchData('https://transformtogeckoboard.herokuapp.com/eoy/transactionsbysource', function (data) {
-      data = this.modelData(data, {
-        category: 'source',
-        donor: 'eoyDonations'
-      }, makeDataFake);
-      this.renderBarChart('#chart-source-data', data);
-
-      if (data.length > self.config.topDonorGroupSize) {
-        this.renderShowHide(document.querySelector('#chart-source-data [data-component="toggle"]'));
       }
     });
   },
